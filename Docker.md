@@ -61,7 +61,8 @@ __EXPOSE__ (optional) you still need to then actually expose the port with -p wh
 __CMD__ will run when a container is starting  
 
 _build and run a container based on an images from the Dockerfile_  
-`docker build .`
+`docker build .`  
+`docker run -p 8080:80 <ID>` _-p (publish) localPort:dockerPort_
 
 
 __strong__  
