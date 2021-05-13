@@ -63,8 +63,3 @@ __CMD__ will run when a container is starting
 _build and run a container based on an images from the Dockerfile_  
 `docker build .`  
 `docker run -p 8080:80 <ID>` _-p (publish) localPort:dockerPort_
-
-
-__strong__  
-_italics_  
-###### Header 6
