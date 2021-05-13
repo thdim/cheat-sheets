@@ -60,6 +60,6 @@ __RUN__ will run when an image is created
 __EXPOSE__ (optional) you still need to then actually expose the port with -p when running docker run  
 __CMD__ will run when a container is starting  
 
-_build and run a container based on an images from the Dockerfile_  
+_build & run_  
 `docker build .`  
 `docker run -p 8080:80 <ID>` _-p (publish) localPort:dockerPort_
