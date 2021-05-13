@@ -4,7 +4,7 @@ _shows info about docker in the machine_
 `docker info` 
 
 _run container in interactive mode (it) at port 8080 and map at 80_  
-`docker container run -it -p 8080:80 nginx` 
+`docker container run -it -p 8080:80 nginx`  
 `docker container run -d -p 8080:80 --name mynginx nginx` _detached (-d) mode_
 
 _show containers in the system_  
@@ -31,7 +31,7 @@ _update docker containers_
 `docker update --restart=always 0576df221c0b`
 
 _connect to the container_  
-`docker container exec -it mynginx bash`
+`docker container exec -it mynginx bash`  
 `exit`
 
 _bind localpath to the container_  
@@ -53,12 +53,15 @@ __Dockerfile example for a Node.js app__
 
 `CMD ["node", "server.js"]`
 
-_notes:_<br>
+_notes:_  
 __WORKDIR__ is where all commants will executed (in the docker)  
 __COPY__ everything from the existing folder (first dot) into the workspace (second dot)  
 __RUN__ will run when an image is created  
+__EXPOSE__ (optional) you still need to then actually expose the port with -p when running docker run  
 __CMD__ will run when a container is starting  
 
+_build and run a container based on an images from the Dockerfile_  
+`docker build .`
 
 
 __strong__  
