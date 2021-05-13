@@ -3,6 +3,9 @@
 _shows info about docker in the machine_  
 `docker info` 
 
+_get all the available options in any command_  
+`docker ps --help`
+
 _run container in interactive mode (it) at port 8080 and map at 80_  
 `docker container run -it -p 8080:80 nginx`  
 `docker container run -d -p 8080:80 --name mynginx nginx` _detached (-d) mode_
@@ -45,9 +48,11 @@ __Dockerfile example for a Node.js app__
 
 `WORKDIR /var/www/app`
 
-`COPY . .`
+`COPY package.json .`
 
 `RUN npm install`
+
+`COPY . .`
 
 `EXPOSE 80`
 
@@ -60,6 +65,6 @@ __RUN__ will run when an image is created
 __EXPOSE__ (optional) you still need to then actually expose the port with -p when running docker run  
 __CMD__ will run when a container is starting  
 
-_build & run_  
+_build & run:_  
 `docker build .`  
 `docker run -p 8080:80 <ID>` _-p (publish) localPort:dockerPort_
