@@ -65,13 +65,13 @@ __Dockerfile example for a Node.js app__
 
 `CMD ["node", "server.js"]`
 
-_notes:_  
-__WORKDIR__ is where all commants will executed (in the docker)  
-__COPY__ everything from the existing folder (first dot) into the workspace (second dot)  
-__RUN__ will run when an image is created  
-__EXPOSE__ (optional) you still need to then actually expose the port with -p when running docker run  
-__CMD__ will run when a container is starting  
+__notes__  
+`WORKDIR` _is where all commants will executed (in the docker)_  
+`COPY` _everything from the existing folder (first dot) into the workspace (second dot)_  
+`RUN` _will run when an image is created_  
+`EXPOSE` _(optional) you still need to then actually expose the port with -p when running docker run_  
+`CMD` _will run when a container is starting_  
 
-_build & run:_  
+__build & run__  
 `docker build .`  
 `docker run -p 8080:80 <ID>` _-p (publish) localPort:dockerPort_
