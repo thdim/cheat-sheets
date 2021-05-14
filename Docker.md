@@ -74,4 +74,4 @@ __notes__
 
 __build & run__  
 `docker build .`  
-`docker run -p 8080:80 <ID>` _-p (publish) localPort:dockerPort_
+`docker run -p 8080:80 <id or name>` _-p (publish) localPort:dockerPort_
