@@ -51,7 +51,7 @@ _bind localpath to the container_
 
 __Dockerfile example for a Node.js app__
 
-`FROM node`
+`FROM node:14`
 
 `WORKDIR /var/www/app`
 
