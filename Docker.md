@@ -1,31 +1,36 @@
 ## Docker Basic Commands
 
-_shows info about docker in the machine_  
-`docker info` 
+`docker info` _shows info about docker in the machine_   
+`docker ps --help` _get all the available options in any command_  
 
-_get all the available options in any command_  
-`docker ps --help`
+__run containers__  
+`docker run -p 8080:80 nginx` _default is attached_   
+`docker run -it -p 8080:80 nginx` _interactive terminal (-it) mode_  
+`docker run -d -p 8080:80 nginx` _detached (-d) mode_  
+`docker attach <id or name>` _will attach to a detached container_  
+`docker logs -f <id or name>` _will show logs (like we are attached)_  
+`docker stop <id or name>`  
 
-_run container in interactive mode (it) at port 8080 and map at 80_  
-`docker container run -it -p 8080:80 nginx`  
-`docker container run -d -p 8080:80 --name mynginx nginx` _detached (-d) mode_
-
-_show containers in the system_  
+__show containers__  
 `docker ps` _only active_  
 `docker ps -a` _all_  
 
-_remove container starting with id 8e10_  
-`docker container rm 8e10`   
-`docker container rm 8e10 -f` _if it's running, it needs to be forced_
+__remove containers__  
+`docker rm <id or name>`   
+`docker rm <id or name> -f` _if it's running, it needs to be forced_
 
-_show all downloaded images in the system_  
-`docker images`  
+__images__  
+`docker pull mongo:latest` _get image from https://hub.docker.com/_  
+`docker images` _show images_  
+`docker rmi <id>` _remove image_  
+`docker image prune` _remove all (not used) images_  
+`docker image inspect <id>` _shows information about an image_  
 
-_get an image from https://hub.docker.com/_  
-`docker pull mongo:latest`
+__naming & tagging__  
+`docker run -p 3000:80 -d --name myname <id>`  _name a container to 'myname'_  
+`docker build -t myname:latest .` _tag (-t) an image when you build it (name:tag)_  
 
-_remove image starting with id 298_  
-`docker image rm 298` 
+
 
 _enviroment variables example_  
 `docker container run -d -p 3306:3306 --name mysql --env MYSQL_ROOT_PASSWORD=123456 mysql`
@@ -39,6 +44,8 @@ _connect to the container_
 
 _bind localpath to the container_  
 `docker container run -d -p 8080:80 -v C:\Users\themi\Docker\nginx-website:/usr/share/nginx/html --name nginx-website nginx`
+
+
 
 ## Dockerfiles
 
