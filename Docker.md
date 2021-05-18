@@ -76,8 +76,7 @@ __build & run__
 
 _[Volumes]_  
 _In the Dockerfile add..._  
-`VOLUME ["/var/www/app/feedback"]` _[Anonymous volume: doesn't persist] path in the docker_
-
+`VOLUME ["/var/www/app/feedback"]` _[Anonymous volume: doesn't persist] path in the docker_  
 _In the console after build_  
 `docker run -d -p 3000:80 -rm --name feedback-app -v feedback` _[Named volume: persist close]_  
 
