@@ -41,9 +41,6 @@ _connect to the container_
 `docker container exec -it mynginx bash`  
 `exit`
 
-_bind localpath to the container_  
-`docker container run -d -p 8080:80 -v C:\Users\themi\Docker\nginx-website:/usr/share/nginx/html --name nginx-website nginx`
-
 
 
 ## Dockerfiles
@@ -75,7 +72,14 @@ __build & run__
 `docker build .`  
 `docker run -p 8080:80 <id or name>` _-p (publish) localPort:dockerPort_
 
-## Volumes
+## Managing Data / Volumes
 
+_[Volumes]_
 _In the Dockerfile add..._  
-`VOLUME ["/var/www/app/feedback"]` _[Anonymous volume] path in the docker_
+`VOLUME ["/var/www/app/feedback"]` _[Anonymous volume: doesn't persist] path in the docker_
+
+_In the console after build_
+`docker run -d -p 3000:80 -rm --name feedback-app -v feedback` _[Named volume: persist close]_  
+
+_[Bind Mounts]_  
+`docker container run -d -p 8080:80 -v C:\Users\themi\Docker\nginx-website:/usr/share/nginx/html --name nginx-website nginx`
