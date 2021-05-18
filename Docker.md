@@ -74,7 +74,7 @@ __build & run__
 
 ## Managing Data / Volumes
 
-_[Volumes]_
+_[Volumes]_  
 _In the Dockerfile add..._  
 `VOLUME ["/var/www/app/feedback"]` _[Anonymous volume: doesn't persist] path in the docker_
 
