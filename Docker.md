@@ -31,7 +31,6 @@ __naming & tagging__
 `docker build -t myname:latest .` _tag (-t) an image when you build it (name:tag)_  
 
 
-
 _enviroment variables example_  
 `docker container run -d -p 3306:3306 --name mysql --env MYSQL_ROOT_PASSWORD=123456 mysql`
 
@@ -75,3 +74,8 @@ __notes__
 __build & run__  
 `docker build .`  
 `docker run -p 8080:80 <id or name>` _-p (publish) localPort:dockerPort_
+
+## Volumes
+
+_In the Dockerfile add..._  
+`VOLUME ["/var/www/app/feedback"]` _[Anonymous volume] path in the docker_
