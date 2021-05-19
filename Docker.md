@@ -75,7 +75,7 @@ __build & run__
 ## Managing Data / Volumes
 
 _[Volumes]_  
-_Anonymous volume: doesn't persist_
+_Anonymous volume: doesn't persist (Survives container shutdown / restart unless --rm is used)_  
 `VOLUME ["/app/data"]` _Dockerfile_  
 `docker run -v /app/data`
 
