@@ -97,4 +97,5 @@ _Managing volumes_
 `docker volume ls` _lists all active volumes_  
 
 _Enviroment variables example_  
-`docker run --env MYSQL_ROOT_PASSWORD=123456 mysql`
+`docker run --env MYSQL_ROOT_PASSWORD=123456 mysql`  
+`docker run -e PORT=5000 -e MYSQL_PASSWORD=123456 mysql` _-e = shorthand for --env_  
