@@ -98,4 +98,5 @@ _Managing volumes_
 
 _Enviroment variables example_  
 `docker run --env MYSQL_ROOT_PASSWORD=123456 mysql`  
-`docker run -e PORT=5000 -e MYSQL_PASSWORD=123456 mysql` _-e = shorthand for --env_  
+`docker run -e PORT=5000 -e MYSQL_PASSWORD=123456 mysql` _multiple variables with -e (shorthand for --env)_  
+`docker run --env-file ./.env` _use .env file in the current directory (./) for the list of enviroment variables_  
