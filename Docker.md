@@ -76,8 +76,7 @@ __build & run__
 
 _[Volumes]_  
 _Anonymous volume: doesn't persist (Survives container shutdown / restart unless --rm is used)_  
-_They can be used for performance_  
-`VOLUME ["/app/data"]` _Dockerfile_  
+_They can be used for performance_   
 `docker run -v /app/data`
 
 _Named volume: persist close (Can be shared across containers)_  
