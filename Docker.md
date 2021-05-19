@@ -81,6 +81,6 @@ _In the console after build_
 `docker run -d -p 3000:80 -rm --name feedback-app -v feedback` _[Named volume: persist close]_  
 
 _[Bind Mounts]_  
-`docker container run -d -p 8080:80 -v C:\Users\themi\Docker\nginx-website:/usr/share/nginx/html --name nginx-website nginx`  
+`docker run -d -p 8080:80 -v C:\Users\themi\Docker\nginx-website:/usr/share/nginx/html --name nginx-website nginx`  
 `-v "%cd%":/app` _Windows shorthand for current directory (where the project is located)_  
 
