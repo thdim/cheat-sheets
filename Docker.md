@@ -83,7 +83,7 @@ _Named volume: persist close_
 `docker run -v data:/app/data` 
 
 _[Bind Mounts]_  
-`docker run -v /path/to/code:/app/code` 
+`docker run -v /path/to/code:/app/code`  
 `docker run -d -p 8080:80 -v C:\Users\themi\Docker\nginx-website:/usr/share/nginx/html --name nginx-website nginx` _full example_    
 `-v "%cd%":/app` _Windows shorthand for current directory (where the project is located)_  
 
