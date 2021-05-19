@@ -68,7 +68,7 @@ __notes__
 `EXPOSE` _(optional) you still need to then actually expose the port with -p when running docker run_  
 `CMD` _will run when a container is starting_  
 
-__.dockeringore__
+__.dockeringore__  
 _will not COPY the listed files or folders (e.g. node_modules)_  
 
 __build & run__  
