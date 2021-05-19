@@ -69,7 +69,10 @@ __notes__
 `CMD` _will run when a container is starting_  
 
 __.dockeringore__  
-_will not COPY the listed files or folders (e.g. node_modules)_  
+_will not COPY the listed files or folders_
+`node_modules`  
+`Dockerfile`  
+`.git`  
 
 __build & run__  
 `docker build .`  
