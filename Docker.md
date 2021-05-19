@@ -30,10 +30,6 @@ __naming & tagging__
 `docker run -p 3000:80 -d --name myname <id>`  _name a container to 'myname'_  
 `docker build -t myname:latest .` _tag (-t) an image when you build it (name:tag)_  
 
-
-_enviroment variables example_  
-`docker container run -d -p 3306:3306 --name mysql --env MYSQL_ROOT_PASSWORD=123456 mysql`
-
 _update docker containers_  
 `docker update --restart=always 0576df221c0b`
 
@@ -57,14 +53,17 @@ __Dockerfile example for a Node.js app__
 
 `COPY . .`
 
-`EXPOSE 80`
+`ENV PORT 80`
+
+`EXPOSE 80` or `EXPOSE $PORT`
 
 `CMD ["node", "server.js"]`
 
 __notes__  
 `WORKDIR` _is where all commants will executed (in the docker)_  
-`COPY` _everything from the existing folder (first dot) into the workspace (second dot), not needed with bind mount (developent)_  
 `RUN` _will run when an image is created_  
+`COPY` _everything from the existing folder (first dot) into the workspace (second dot), not needed with bind mount (developent)_  
+`ENV ENV_NAME ENV_VALUE` _set an enviroment variable with ENV_NAME and ENV_VALUE_  
 `EXPOSE` _(optional) you still need to then actually expose the port with -p when running docker run_  
 `CMD` _will run when a container is starting_  
 
@@ -96,3 +95,6 @@ _[Bind Mounts] Contolled by the user_
 _Managing volumes_  
 `docker volume --help` _available commands about volumes_  
 `docker volume ls` _lists all active volumes_  
+
+_Enviroment variables example_  
+`docker run --env MYSQL_ROOT_PASSWORD=123456 mysql`
