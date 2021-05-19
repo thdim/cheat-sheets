@@ -75,12 +75,15 @@ __build & run__
 ## Managing Data / Volumes
 
 _[Volumes]_  
-_In the Dockerfile add..._  
-`VOLUME ["/var/www/app/feedback"]` _[Anonymous volume: doesn't persist] path in the docker_  
-_In the console after build_  
-`docker run -d -p 3000:80 -rm --name feedback-app -v feedback` _[Named volume: persist close]_  
+_Anonymous volume: doesn't persist_
+`VOLUME ["/app/data"]` _Dockerfile_  
+`docker run -v /app/data`
+
+_Named volume: persist close_  
+`docker run -v data:/app/data` 
 
 _[Bind Mounts]_  
-`docker run -d -p 8080:80 -v C:\Users\themi\Docker\nginx-website:/usr/share/nginx/html --name nginx-website nginx`  
+`docker run -v /path/to/code:/app/code` 
+`docker run -d -p 8080:80 -v C:\Users\themi\Docker\nginx-website:/usr/share/nginx/html --name nginx-website nginx` _full example_    
 `-v "%cd%":/app` _Windows shorthand for current directory (where the project is located)_  
 
