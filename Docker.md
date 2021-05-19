@@ -76,14 +76,15 @@ __build & run__
 
 _[Volumes]_  
 _Anonymous volume: doesn't persist (Survives container shutdown / restart unless --rm is used)_  
+_They can be used for performance_  
 `VOLUME ["/app/data"]` _Dockerfile_  
 `docker run -v /app/data`
 
-_Named volume: persist close_  
+_Named volume: persist close (Can be shared across containers)_  
 `docker run -v data:/app/data` 
 
 _[Bind Mounts]_  
 `docker run -v /path/to/code:/app/code`  
-`docker run -d -p 8080:80 -v C:\Users\themi\Docker\nginx-website:/usr/share/nginx/html --name nginx-website nginx` _full example_    
+`docker run -d -p 8080:80 -v C:\Users\themi\Docker\nginx-website:/usr/share/nginx/html nginx` _full example_    
 `-v "%cd%":/app` _Windows shorthand for current directory (where the project is located)_  
 
