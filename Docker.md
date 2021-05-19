@@ -74,7 +74,7 @@ __build & run__
 
 ## Managing Data / Volumes
 
-_[Volumes]_  
+_[Volumes] Controlled by Docker_  
 _Anonymous volume: doesn't persist (Survives container shutdown / restart unless --rm is used)_  
 _They can be used for performance_   
 `docker run -v /app/data`
@@ -82,8 +82,11 @@ _They can be used for performance_
 _Named volume: persist close (Can be shared across containers)_  
 `docker run -v data:/app/data` 
 
-_[Bind Mounts]_  
+_[Bind Mounts] Contolled by the user_  
 `docker run -v /path/to/code:/app/code`  
 `docker run -d -p 8080:80 -v C:\Users\themi\Docker\nginx-website:/usr/share/nginx/html nginx` _full example_    
 `-v "%cd%":/app` _Windows shorthand for current directory (where the project is located)_  
 
+_Managing volumes_  
+`docker volume --help` _available commands about volumes_  
+`docker volume ls` _lists all active volumes_  
