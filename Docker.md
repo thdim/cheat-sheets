@@ -63,10 +63,13 @@ __Dockerfile example for a Node.js app__
 
 __notes__  
 `WORKDIR` _is where all commants will executed (in the docker)_  
-`COPY` _everything from the existing folder (first dot) into the workspace (second dot)_  
+`COPY` _everything from the existing folder (first dot) into the workspace (second dot), not needed with bind mount (developent)_  
 `RUN` _will run when an image is created_  
 `EXPOSE` _(optional) you still need to then actually expose the port with -p when running docker run_  
 `CMD` _will run when a container is starting_  
+
+__.dockeringore__
+_will not COPY the listed files or folders (e.g. node_modules)_  
 
 __build & run__  
 `docker build .`  
