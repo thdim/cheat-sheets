@@ -110,6 +110,7 @@ __Enviroment variables example__
 __Docker Network__  
 `docker network create favorites-net` _create a network with name favorites-net_  
 `docker run -d --name mongodb --network favorites-net mongo` _use the network_  
+_replace localhost or host.docker.internal with the name of the container in the network to communicate_  
 
 
 
