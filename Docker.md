@@ -107,7 +107,7 @@ __Enviroment variables example__
 
 `docker container inspect mongodb` _inspect container with name mongodb, find the ip to use in another container (basic solution for cross container communication)_  
 
-__Docker Network__  
+__Docker Network (cross-container communication)__  
 `docker network create favorites-net` _create a network with name favorites-net_  
 `docker run -d --name mongodb --network favorites-net mongo` _use the network_  
 _replace localhost or host.docker.internal with the name of the container in the network to communicate_  
