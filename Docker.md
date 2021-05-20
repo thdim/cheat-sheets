@@ -99,4 +99,14 @@ _Managing volumes_
 _Enviroment variables example_  
 `docker run --env MYSQL_ROOT_PASSWORD=123456 mysql`  
 `docker run -e PORT=5000 -e MYSQL_PASSWORD=123456 mysql` _multiple variables with -e (shorthand for --env)_  
-`docker run --env-file ./.env` _use .env file in the current directory (./) for the list of enviroment variables_  
+`docker run --env-file ./.env` _use .env file in the current directory (./) for the list of enviroment variables_
+
+## Networking: (Cross-)Container Communication
+
+`host.docker.internal` _use it wherever you use localhost in code in order to communicate with the hosting machine (example would be a database)_  
+`docker container inspect mongodb` _inspect container with name mongodb, find the ip to use in another container (basic solution for cross container communication)_  
+`docker network create favorites-net` _create a network with name favorites-net_  
+`docker run -d --name mongodb --network favorites-net mongo` _use the network_  
+
+
+
