@@ -79,7 +79,7 @@ __build & run__
 
 ## Managing Data / Volumes
 
-_[Volumes] Controlled by Docker_  
+__[Volumes] Controlled by Docker__  
 _Anonymous volume: doesn't persist (Survives container shutdown / restart unless --rm is used)_  
 _They can be used for performance_   
 `docker run -v /app/data`
@@ -87,16 +87,16 @@ _They can be used for performance_
 _Named volume: persist close (Can be shared across containers)_  
 `docker run -v data:/app/data` 
 
-_[Bind Mounts] Contolled by the user_  
+__[Bind Mounts] Contolled by the user__  
 `docker run -v /path/to/code:/app/code`  
 `docker run -d -p 8080:80 -v C:\Users\themi\Docker\nginx-website:/usr/share/nginx/html nginx` _full example_    
 `-v "%cd%":/app` _Windows shorthand for current directory (where the project is located)_  
 
-_Managing volumes_  
+__Managing volumes__  
 `docker volume --help` _available commands about volumes_  
 `docker volume ls` _lists all active volumes_  
 
-_Enviroment variables example_  
+__Enviroment variables example__  
 `docker run --env MYSQL_ROOT_PASSWORD=123456 mysql`  
 `docker run -e PORT=5000 -e MYSQL_PASSWORD=123456 mysql` _multiple variables with -e (shorthand for --env)_  
 `docker run --env-file ./.env` _use .env file in the current directory (./) for the list of enviroment variables_
@@ -107,7 +107,7 @@ _Enviroment variables example_
 
 `docker container inspect mongodb` _inspect container with name mongodb, find the ip to use in another container (basic solution for cross container communication)_  
 
-_Docker Network_  
+__Docker Network__  
 `docker network create favorites-net` _create a network with name favorites-net_  
 `docker run -d --name mongodb --network favorites-net mongo` _use the network_  
 
