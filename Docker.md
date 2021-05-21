@@ -112,7 +112,7 @@ __Docker Network (cross-container communication)__
 `docker run -d --name mongodb --network favorites-net mongo` _use the network_  
 _replace localhost or host.docker.internal with the name of the container in the network to communicate_  
 
-__Complete Example of a Multi-Container App with Network__
+__Complete Example of a Multi-Container App with Network__  
 `docker network create goals-net`  
 `docker run --name mongodb --rm -d --network goals-net mongo`  _no ports because it will communicate in the network_  
 `docker run --name goals-backend --rm -d -p 80:80 --network goals-net goals-node` _use the name of the database (mongodb) as domain (eg localhost) in the app, expose ports to talk with the frontend_  
