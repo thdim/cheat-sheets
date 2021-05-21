@@ -121,7 +121,7 @@ _no ports because it will communicate in the network, volume to a local folder t
 `docker run --name goals-backend -v /my/own/codedir:/app -v /my/own/datadir:/app/logs --rm -d -p 80:80 --network goals-net goals-node`  
 _use the name of the database (mongodb) as domain (eg localhost) in the app, expose ports to talk with the frontend_  
 
-`docker run --name goals-frontend --rm -it -p 3000:3000 goals-react`  
+`docker run --name goals-frontend -v /my/own/codedir:/app --rm -it -p 3000:3000 goals-react`  
 _use localhost as a domain in the app, publich ports because you want to interact_  
 
 
