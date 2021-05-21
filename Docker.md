@@ -115,7 +115,7 @@ _replace localhost or host.docker.internal with the name of the container in the
 __Complete Example of a (Manual) Multi-Container App with Network__  
 `docker network create goals-net`  
 
-`docker run --name mongodb -v /my/own/datadir:/data/db --rm -d --network goals-net -e MONGO_INITDB_ROOT_USERNAME=themis -e MONGO_INITDB_ROOT_PASSWORD=123456 mongo`  
+`docker run --name mongodb -v data:/data/db --rm -d --network goals-net -e MONGO_INITDB_ROOT_USERNAME=themis -e MONGO_INITDB_ROOT_PASSWORD=123456 mongo`  
 _no ports because it will communicate in the network, volume to a local folder to save data_  
 
 `docker run --name goals-backend -v /my/own/codedir:/app -v /my/own/datadir:/app/logs --rm -d -p 80:80 --network goals-net goals-node`  
@@ -127,13 +127,17 @@ _use localhost as a domain in the app, publich ports because you want to interac
 ## Docker Compose: (Automatic) Multi-Container Orchestration  
 
 __docker-compose.yaml__  
+`# COMMENT`  
+
 `version: "3.8"`  
 
 `services: `  
 &nbsp;&nbsp;`mongodb:`  
 &nbsp;&nbsp;&nbsp;&nbsp;`image: mongo`  
 &nbsp;&nbsp;&nbsp;&nbsp;`volumes:`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- data:/data/db` or `- /my/own/datadir:/data/db`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- data:/data/db`  
+&nbsp;&nbsp;&nbsp;&nbsp;`enviroment:`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`-MONGO_INITDB_ROOT_USERNAME=themis`  
 &nbsp;&nbsp;`backend:`  
 &nbsp;&nbsp;`frontend:`  
 
