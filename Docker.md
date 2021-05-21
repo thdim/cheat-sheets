@@ -154,7 +154,16 @@ __docker-compose.yaml__
 &nbsp;&nbsp;&nbsp;&nbsp;`volumes:`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- logs:/app/logs`    
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- ./backend:/app`  
+&nbsp;&nbsp;&nbsp;&nbsp;`depends_on: `  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- mongodb` 
 &nbsp;&nbsp;`frontend:`  
+&nbsp;&nbsp;&nbsp;&nbsp;`build: ./frontend`  
+&nbsp;&nbsp;&nbsp;&nbsp;`volumes:`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- ./frontend/src:/app/src`  
+&nbsp;&nbsp;&nbsp;&nbsp;`stdin_open: true`  
+&nbsp;&nbsp;&nbsp;&nbsp;`tty: true`  
+&nbsp;&nbsp;&nbsp;&nbsp;`depends_on: `  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- backend`  
 
 `volumes:`  
 &nbsp;&nbsp;`data:` _this needs to be specified if we use named volumes (it's weird but this is the syntax)_  
@@ -168,6 +177,8 @@ __notes__
 `config` _--rm and -d as added by default when using Docker compose_
 `network` _you can do it but by default Docker compose will create a network in Docker Compose_  
 `build` _the relative path to find the Dockerfile and build the container_  
+`depends_on` _specify the list of other services that it depends on_  
+`stdin_open & tty` _interactive mode (like -it)_  
 
 __run & stop__  
 `docker-compose up`  
