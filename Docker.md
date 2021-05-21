@@ -130,7 +130,7 @@ __docker-compose.yaml__
 `version: "3.8"`  
 
 `services: `  
-`  mongo:`  
+`&nbsp;&nbsp;mongo:`  
 
 __notes__  
 `version` _the docker compose version https://docs.docker.com/compose/compose-file/compose-versioning/_  
