@@ -14,6 +14,9 @@ __docker-compose.yaml__
 &nbsp;&nbsp;&nbsp;&nbsp;`volumes:`   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- ./src:/var/www/html`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro`  
+&nbsp;&nbsp;&nbsp;&nbsp;`depends_on:`   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- php`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- mysql`  
 &nbsp;&nbsp;`php:`  
 &nbsp;&nbsp;&nbsp;&nbsp;`build:`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`context: ./docker`  
@@ -36,5 +39,5 @@ __docker-compose.yaml__
       
 __console commands__  
 `docker-compose run --rm composer create-project --prefer-dist laravel/laravel .`  
-`docker-compose up -d server php mysql`
+`docker-compose up -d server`
 
