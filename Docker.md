@@ -150,16 +150,21 @@ __docker-compose.yaml__
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`args: `  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`some-arg: 1`  
 &nbsp;&nbsp;&nbsp;&nbsp;`ports:`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- '80:80'`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- '80:80'` 
+&nbsp;&nbsp;&nbsp;&nbsp;`volumes:`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- logs:/app/logs`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- ./backend:/app`
 &nbsp;&nbsp;`frontend:`  
 
 `volumes:`  
 &nbsp;&nbsp;`data:` _this needs to be specified if we use named volumes (it's weird but this is the syntax)_  
+&nbsp;&nbsp;`logs:`
 
 
 __notes__  
 `version` _the docker compose version https://docs.docker.com/compose/compose-file/compose-versioning/_  
 `services` _or else "containers", childs need to be 2 spaces inside_  
+`volumes` _in we use a bind volume we can use relative path (./) in Docker compose_  
 `config` _--rm and -d as added by default when using Docker compose_
 `network` _you can do it but by default Docker compose will create a network in Docker Compose_  
 `build` _the relative path to find the Dockerfile and build the container_  
