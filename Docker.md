@@ -182,7 +182,8 @@ __notes__
 
 __run & stop__  
 `docker-compose up`  
-`docker-compose up -d` _detached mode_  
+`docker-compose up -d` _detached mode_
+`docker-compose up --build` _force image rebuild_  
 `docker-compose down` _deletes containers and networks but does not delete volumes_  
 `docker-compose down -v` _deletes everything, including volumes_  
 
