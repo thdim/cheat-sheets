@@ -139,14 +139,11 @@ __docker-compose.yaml__
 &nbsp;&nbsp;&nbsp;&nbsp;`enviroment:`    
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`MONGO_INITDB_ROOT_USERNAME: themis` or `- MONGO_INITDB_ROOT_USERNAME=themis`  
 &nbsp;&nbsp;&nbsp;&nbsp;`env_file:`  
-&nbsp;&nbsp;&nbsp;&nbsp;_-or-_  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- ./env/mongo.env`  
-&nbsp;&nbsp;&nbsp;&nbsp;_you can do that but all services will be by default to the same network_  
-&nbsp;&nbsp;&nbsp;&nbsp;`network:`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- goals-net`   
+&nbsp;&nbsp;&nbsp;&nbsp;_# OR_  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- ./env/mongo.env`    
 &nbsp;&nbsp;`backend:`  
 &nbsp;&nbsp;&nbsp;&nbsp;`build: ./backend` 
-&nbsp;&nbsp;&nbsp;&nbsp;_-or-_    
+&nbsp;&nbsp;&nbsp;&nbsp;_# OR_    
 &nbsp;&nbsp;&nbsp;&nbsp;`build:`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`context: ./backend`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`dockerfile: Dockerfile`  
