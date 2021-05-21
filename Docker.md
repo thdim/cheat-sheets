@@ -142,7 +142,7 @@ __docker-compose.yaml__
 &nbsp;&nbsp;&nbsp;&nbsp;_# OR_  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- ./env/mongo.env`    
 &nbsp;&nbsp;`backend:`  
-&nbsp;&nbsp;&nbsp;&nbsp;`build: ./backend` 
+&nbsp;&nbsp;&nbsp;&nbsp;`build: ./backend`  
 &nbsp;&nbsp;&nbsp;&nbsp;_# OR_    
 &nbsp;&nbsp;&nbsp;&nbsp;`build:`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`context: ./backend`  
@@ -158,7 +158,8 @@ __docker-compose.yaml__
 __notes__  
 `version` _the docker compose version https://docs.docker.com/compose/compose-file/compose-versioning/_  
 `services` _or else "containers", childs need to be 2 spaces inside_  
-`config` _--rm and -d as added by default when using Docker compose_  
+`config` _--rm and -d as added by default when using Docker compose_
+`network` _you can do it but by default Docker compose will create a network in Docker Compose_  
 `build` _the relative path to find the Dockerfile and build the container_  
 
 __run & stop__  
