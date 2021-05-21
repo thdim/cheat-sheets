@@ -137,7 +137,7 @@ __docker-compose.yaml__
 &nbsp;&nbsp;&nbsp;&nbsp;`volumes:`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- data:/data/db`  
 &nbsp;&nbsp;&nbsp;&nbsp;`enviroment:`    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- MONGO_INITDB_ROOT_USERNAME=themis` or `MONGO_INITDB_ROOT_USERNAME: themis`    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`MONGO_INITDB_ROOT_USERNAME: themis` or `- MONGO_INITDB_ROOT_USERNAME=themis`    
 &nbsp;&nbsp;`backend:`  
 &nbsp;&nbsp;`frontend:`  
 
