@@ -35,8 +35,8 @@ __naming & tagging__
 __update__  
 `docker update --restart=always 0576df221c0b` _always restart_  
 
-__connect__  
-`docker container exec -it mynginx bash` _connect in the console of the container_  
+__execute__  
+`docker exec -it mynginx bash` _connect in the console (bash) of the container_  
 `exit`  
 
 ## Dockerfiles
