@@ -143,6 +143,12 @@ __docker-compose.yaml__
 &nbsp;&nbsp;&nbsp;&nbsp;`network:` _you can do that but all services will be by default to the same network_  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- goals-net`   
 &nbsp;&nbsp;`backend:`  
+&nbsp;&nbsp;&nbsp;&nbsp;`build: ./backend` or  
+&nbsp;&nbsp;&nbsp;&nbsp;`build:`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`context: ./backend`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`dockerfile: Dockerfile`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`args: `  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`some-arg: 1`  
 &nbsp;&nbsp;`frontend:`  
 
 `volumes:`  
@@ -153,4 +159,12 @@ __notes__
 `version` _the docker compose version https://docs.docker.com/compose/compose-file/compose-versioning/_  
 `services` _or else "containers", childs need to be 2 spaces inside_  
 `config` _--rm and -d as added by default when using Docker compose_  
+`build` _the relative path to find the Dockerfile and build the container_  
+
+__run & stop__  
+`docker-compose up`  
+`docker-compose up -d` _detached mode_  
+`docker-compose down` _deletes containers and networks but does not delete volumes_  
+`docker-compose down -v` _deletes everything, including volumes_  
+
 
