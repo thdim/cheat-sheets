@@ -9,9 +9,27 @@ __docker-compose.yaml__
 `services: `  
 &nbsp;&nbsp;`server:`  
 &nbsp;&nbsp;&nbsp;&nbsp;`image: 'nginx:stable-alpine'`  
-
+&nbsp;&nbsp;&nbsp;&nbsp;`ports:`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- '8000:80'`  
+&nbsp;&nbsp;&nbsp;&nbsp;`volumes:`   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro`  
 &nbsp;&nbsp;`php:`  
+&nbsp;&nbsp;&nbsp;&nbsp;`build:`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`context: ./docker`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`dockerfile: php.dockerfile`  
+&nbsp;&nbsp;&nbsp;&nbsp;`volumes:`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- ./src:/var/www/html:delegated`  
 &nbsp;&nbsp;`mysql:`  
+&nbsp;&nbsp;&nbsp;&nbsp;`image: 'mysql:5.7'`  
+&nbsp;&nbsp;&nbsp;&nbsp;`env_file:`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- ./env/mysql.env`  
 &nbsp;&nbsp;`composer:`  
+&nbsp;&nbsp;&nbsp;&nbsp;`build:`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`context: ./docker`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`dockerfile: composer.dockerfile`  
+&nbsp;&nbsp;&nbsp;&nbsp;`volumes:`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- ./src:/var/www/html`  
+
 &nbsp;&nbsp;`artisan:`  
 &nbsp;&nbsp;`npm:`  
+      
