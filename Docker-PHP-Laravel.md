@@ -33,3 +33,6 @@ __docker-compose.yaml__
 &nbsp;&nbsp;`artisan:`  
 &nbsp;&nbsp;`npm:`  
       
+__console commands__  
+`docker-compose run --rm composer create-project --prefer-disk laravel/laravel .`  
+
