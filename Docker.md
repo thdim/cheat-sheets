@@ -150,10 +150,10 @@ __docker-compose.yaml__
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`args: `  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`some-arg: 1`  
 &nbsp;&nbsp;&nbsp;&nbsp;`ports:`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- '80:80'` 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- '80:80'`  
 &nbsp;&nbsp;&nbsp;&nbsp;`volumes:`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- logs:/app/logs`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- ./backend:/app`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- logs:/app/logs`    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- ./backend:/app`  
 &nbsp;&nbsp;`frontend:`  
 
 `volumes:`  
