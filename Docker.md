@@ -130,10 +130,16 @@ __docker-compose.yaml__
 `version: "3.8"`  
 
 `services: `  
-&nbsp;&nbsp;`mongo:`  
+&nbsp;&nbsp;`mongodb:`  
+&nbsp;&nbsp;&nbsp;&nbsp;`image: mongo`  
+&nbsp;&nbsp;&nbsp;&nbsp;`volumes:`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- data:/data/db` or `- /my/own/datadir:/data/db`
+&nbsp;&nbsp;`backend:`  
+&nbsp;&nbsp;`frontend:`  
+
 
 __notes__  
 `version` _the docker compose version https://docs.docker.com/compose/compose-file/compose-versioning/_  
-`services` _containers_  
-
+`services` _or else "containers", childs need to be 2 spaces inside_  
+`config` _--rm and -d as added by default when using Docker compose_  
 
