@@ -137,7 +137,11 @@ __docker-compose.yaml__
 &nbsp;&nbsp;&nbsp;&nbsp;`volumes:`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- data:/data/db`  
 &nbsp;&nbsp;&nbsp;&nbsp;`enviroment:`    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`MONGO_INITDB_ROOT_USERNAME: themis` or `- MONGO_INITDB_ROOT_USERNAME=themis`    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`MONGO_INITDB_ROOT_USERNAME: themis` or `- MONGO_INITDB_ROOT_USERNAME=themis`  
+&nbsp;&nbsp;&nbsp;&nbsp;`enviroment:` _alternative_  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- ./env/mongo.env`  
+&nbsp;&nbsp;&nbsp;&nbsp;`network:` _you can do that but all services will be by default to the same network_  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- goals-net`   
 &nbsp;&nbsp;`backend:`  
 &nbsp;&nbsp;`frontend:`  
 
