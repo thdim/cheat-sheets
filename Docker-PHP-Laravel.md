@@ -19,8 +19,8 @@ __docker-compose.yaml__
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- mysql`  
 &nbsp;&nbsp;`php:`  
 &nbsp;&nbsp;&nbsp;&nbsp;`build:`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`context: ./docker`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`dockerfile: php.dockerfile`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`context: .`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`dockerfile: docker/php.dockerfile`  
 &nbsp;&nbsp;&nbsp;&nbsp;`volumes:`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- ./src:/var/www/html:delegated`  
 &nbsp;&nbsp;`mysql:`  
@@ -29,8 +29,8 @@ __docker-compose.yaml__
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- ./env/mysql.env`  
 &nbsp;&nbsp;`composer:`  
 &nbsp;&nbsp;&nbsp;&nbsp;`build:`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`context: ./docker`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`dockerfile: composer.dockerfile`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`context: .`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`dockerfile: docker/composer.dockerfile`  
 &nbsp;&nbsp;&nbsp;&nbsp;`volumes:`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- ./src:/var/www/html`  
 
