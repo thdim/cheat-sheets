@@ -3,6 +3,30 @@
 App Containers: PHP Interpreter, Nginx Web Server, MySQL Database  
 Utility Containers: Composer, Laravel Artisan, npm
 
+__docker/composer.dockerfile__  
+`FROM composer:latest`  
+
+`RUN addgroup -g 1000 laravel && adduser -G laravel -g laravel -s /bin/sh -D laravel`  
+
+`USER laravel`  
+
+`WORKDIR /var/www/html`  
+
+`ENTRYPOINT [ "composer", "--ignore-platform-reqs" ]`
+
+__docker/php.dockerfile__  
+`FROM php:7.4-fpm-alpine`  
+
+`WORKDIR /var/www/html`  
+
+`COPY src .`  
+
+`RUN docker-php-ext-install pdo pdo_mysql`  
+
+`RUN addgroup -g 1000 laravel && adduser -G laravel -g laravel -s /bin/sh -D laravel`  
+
+`USER laravel`  
+
 __docker-compose.yaml__  
 `version: "3.8"`  
 
