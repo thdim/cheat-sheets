@@ -14,12 +14,11 @@ MVC - Model (/app/Models) View (/resources/views) Controller (/app/Http/Controll
 ## Routes
 
 __Set route name__  
-
 `Route::get('/contact', function () {`  
 &nbsp;&nbsp;`return view('contact');`  
 `})->name('home.contact');`  
 
-__Set route with parameters__
+__Set route with parameters__  
 `Route::get('/posts/{id}', function($id) {`  
 &nbsp;&nbsp;`return 'Blog post '.$id;`  
 `});`  
