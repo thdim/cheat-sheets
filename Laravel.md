@@ -15,6 +15,6 @@ MVC - Model (/app/Models) View (/resources/views) Controller (/app/Http/Controll
 
 __Set route name__  
 
-`Route::get('/contact', function () {
-    return 'Contact';
-})->name('home.contact');`  
+`Route::get('/contact', function () {`  
+&nbsp;&nbsp;`return 'Contact';`  
+`})->name('home.contact');`  
