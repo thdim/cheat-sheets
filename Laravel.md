@@ -10,3 +10,11 @@ MVC - Model (/app/Models) View (/resources/views) Controller (/app/Http/Controll
 /routes _configure routes_  
 /tests  
 /vendor _3rd party software, including Laravel_  
+
+## Routes
+
+__Set route name__  
+
+`Route::get('/contact', function () {
+    return 'Contact';
+})->name('home.contact');`  
