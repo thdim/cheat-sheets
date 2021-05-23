@@ -23,3 +23,8 @@ __Set route with parameters__
 &nbsp;&nbsp;`return 'Blog post '.$id;`  
 `});`  
 
+__Set route with optional parameter__  
+`Route::get('/recent-posts/{days_ago?}', function($daysAgo = 20) {`  
+&nbsp;&nbsp;`return 'Posts from '.$daysAgo.' days ago';`  
+`});`  
+
