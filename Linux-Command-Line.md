@@ -12,7 +12,7 @@ __Understand -options arguments with ncal__
 `ncal 1982` _display calendar of the given year_  
 `ncal august 1982` _and month_  
 
-__man (manual) command__
+__man (manual) command__  
 `man date` _options and arguments manual_  
 `q` _exit manual_  
 `h` _navigation help of the man page_  
