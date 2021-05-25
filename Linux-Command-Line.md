@@ -9,3 +9,4 @@
 `ncal -M` _start the week on Monday (default Sunday)_  
 `ncal -3` _previous current and next month_  
 `ncal -j3` _combine options_  
+`ncal -A 2` _2 months after the current month_  
