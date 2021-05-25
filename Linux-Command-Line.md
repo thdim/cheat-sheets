@@ -11,3 +11,9 @@ __Understand -options arguments with ncal__
 `ncal -A 2` _2 months after the current month_  
 `ncal 1982` _display calendar of the given year_  
 `ncal august 1982` _and month_  
+
+__man (manual) command__
+`man date` _options and arguments manual_  
+`q` _exit manual_  
+`up and down key` _move the manual one line up or down_  
+`space` _move the manual one page down_  
