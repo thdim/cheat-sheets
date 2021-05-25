@@ -15,5 +15,8 @@ __Understand -options arguments with ncal__
 __man (manual) command__
 `man date` _options and arguments manual_  
 `q` _exit manual_  
+`h` _navigation help of the man page_  
 `up and down key` _move the manual one line up or down_  
-`space` _move the manual one page down_  
+`space or f` _move the manual one page down (forward)_  
+`b` _move the manual one page up (back)_
+`\` _search for a text_  
