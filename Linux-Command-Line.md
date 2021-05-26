@@ -35,4 +35,8 @@ __type & which__
 `pwd` _print working directory (where am I?)_  
 `ls` _list the contents of the current directory_  
 `ls /etc/` _list the contents of the /etc/_  
+`ls -l` _long info_  
+`ls -a` _include all (hidden)_  
+`ls -h` _human readable size_  
+
 
