@@ -20,3 +20,9 @@ __man (manual) command__
 `space or f` _move the manual one page down (forward)_  
 `b` _move the manual one page up (back)_
 `\` _search for a text_  
+
+__type & which__  
+`type clear` _will return the type of the command_  
+`type cd` _build-in shell command_  
+`which clear` _the exact location of the executable_  
+`help cd` _for build-in shell commands (they don't have man)_  
