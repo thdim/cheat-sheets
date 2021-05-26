@@ -38,5 +38,5 @@ __type & which__
 `ls -l` _long info_  
 `ls -a` _include all (hidden)_  
 `ls -h` _human readable size_  
-
-
+`cd folder/` _change directory_  
+`cd ..` _go back one level_  
