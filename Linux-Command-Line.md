@@ -30,8 +30,6 @@ __type & which__
 
 ## Navigation  
 
-`/` _root_  
-`~` _home_  
 `pwd` _print working directory (where am I?)_  
 `ls` _list the contents of the current directory_  
 `ls /etc/` _list the contents of the /etc/_  
@@ -40,3 +38,5 @@ __type & which__
 `ls -h` _human readable size_  
 `cd folder/` _change directory_  
 `cd ..` _go back one level_  
+`cd /` _root_  
+`cd ~` _home_  
