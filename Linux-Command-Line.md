@@ -27,3 +27,12 @@ __type & which__
 `type cd` _build-in shell command_  
 `which clear` _the exact location of the executable_  
 `help cd` _for build-in shell commands (they don't have man)_  
+
+## Navigation  
+
+`/` _root_  
+`~` _home_  
+`pwd` _print working directory (where am I?)_  
+`ls` _list the contents of the current directory_  
+`ls /etc/` _list the contents of the /etc/_  
+
