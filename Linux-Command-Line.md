@@ -40,3 +40,11 @@ __type & which__
 `cd ..` _go back one level_  
 `cd /` _root_  
 `cd ~` _home_  
+
+__basic folders__  
+`/bin` _executable programs (binaries)_  
+`/etc` _configs and init scripts_  
+`/media` _connect to removable media (USB, Disks)_  
+`/var` _logs, caches, output of executables_  
+`/root` _the "home" of the root user_  
+`/usr` _executable files (installed)_  
