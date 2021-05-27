@@ -56,5 +56,6 @@ __basic folders__
 `file <filename>` _determines the type of a file (not by extension) and returns info about it_  
 `mkdir <folder>` _create new directory_  
 `mkdir <folder> <folder>` _create multiple new directories_  
+`mkdir -p <parent>/<child>` _create parent directory (and child)_  
 
 
