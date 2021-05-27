@@ -48,3 +48,9 @@ __basic folders__
 `/var` _logs, caches, output of executables_  
 `/root` _the "home" of the root user_  
 `/usr` _executable files (installed)_  
+
+## Creating Files & Folders  
+
+`touch <filename>` _create new file_  
+`touch <filename> <filename>` _create multiple new files_  
+
