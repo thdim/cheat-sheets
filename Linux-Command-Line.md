@@ -51,6 +51,10 @@ __basic folders__
 
 ## Creating Files & Folders  
 
-`touch <filename>` _create new file_  
+`touch <filename>` _create new file (changes the modification times if file exist)_  
 `touch <filename> <filename>` _create multiple new files_  
+`file <filename>` _determines the type of a file (not by extension) and returns info about it_  
+`mkdir <folder>` _create new directory_  
+`mkdir <folder> <folder>` _create multiple new directories_  
+
 
