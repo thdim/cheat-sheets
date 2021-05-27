@@ -58,4 +58,8 @@ __basic folders__
 `mkdir <folder> <folder>` _create multiple new directories_  
 `mkdir -p <parent>/<child>` _create parent directory (and child)_  
 
+## Nano
 
+`nano <filename>` _open file with nano text editor_  
+`^O` or `^S` _save changes_  
+`^W` _search forward to current position_  
