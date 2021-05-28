@@ -15,8 +15,8 @@
 
 ## Basic Commands
 `git init` _initialize repository (create .git)_  
-`git add <filename>` _stage a file to be added to the repository_  
-`git commit -m "<message>"` _commit added files_  
+`git add <filename>` _stage a file_  
+`git commit -m "<message>"` _commit staged files_  
 
 
 __ FROM MS NOTES ___
