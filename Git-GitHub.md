@@ -1,6 +1,6 @@
 # Git & GitHub
 
-## Configurations
+## Configurations (blames)
 
 `git config --list`  
 `git config --global user.name "Themistoklis Dimitriou"`  
@@ -10,24 +10,22 @@
 
 `#` _there are changes that are not yet inside the repository_  
 `+` _new files that are staged to be added to the repository_  
-`*` _there are changes available from repository to current version_  
+`*` _there are changes available (?)_  
 
 
 ## Basic Commands
 `git init` _initialize repository (create .git)_  
 `git add <filename>` _stage a file_  
 `git commit -m "<message>"` _commit staged files_  
-`git add -A && git commit -m "<message>"` (Add all files and commit)
-`git commit -a -m "<message>"` _-a is a shortcut for add all_
+`git add -A && git commit -m "<message>"` _add all files and commit_  
+`git commit -a -m "<message>"` _-a is a shortcut for add all_  
+`git add .` _add all modified files_  
+
 __ FROM MS NOTES ___
-# Commit from console
-
-
-git add . (Add all modified files)
 
 # Push to Github
-git remote add origin https://github.com/thdim/ritualtrip.com.git
-git push origin master
+`git remote add origin https://github.com/thdim/ritualtrip.com.git`  
+`git push origin master`  
 
 # Pull from Github
 git pull origin master
