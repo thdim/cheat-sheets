@@ -28,9 +28,9 @@ __push__
 
 __pull__    
 `git pull origin master`  
-
-
-__ FROM MS NOTES ___
+  
+  
+##### FROM MS NOTES  
 
 ## Setup a tracking
 git branch --set-upstream-to=origin/master master
