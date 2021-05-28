@@ -21,14 +21,16 @@
 `git commit -a -m "<message>"` _-a is a shortcut for add all_  
 `git add .` _add all modified files_  
 
-__ FROM MS NOTES ___
-
-## Push to Github
+## Github
+__push__  
 `git remote add origin https://github.com/thdim/youingreece.git`  
 `git push origin master`  
 
-## Pull from Github  
+__pull__    
 `git pull origin master`  
+
+
+__ FROM MS NOTES ___
 
 ## Setup a tracking
 git branch --set-upstream-to=origin/master master
