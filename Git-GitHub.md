@@ -17,12 +17,12 @@
 `git init` _initialize repository (create .git)_  
 `git add <filename>` _stage a file_  
 `git commit -m "<message>"` _commit staged files_  
-
-
+`git add -A && git commit -m "<message>"` (Add all files and commit)
+`git commit -a -m "<message>"` _-a is a shortcut for add all_
 __ FROM MS NOTES ___
 # Commit from console
-git add -A && git commit -m "<message>" (Add all files and commit)
-git commit -a -m "<message>" (-a is a shortcut for add all)
+
+
 git add . (Add all modified files)
 
 # Push to Github
@@ -35,9 +35,9 @@ git pull origin master
 git branch --set-upstream-to=origin/master master
 git pull (now you can just pull)
 
-# Changes and logs
-git status
-git diff <filename> or <sha code> (Get differences)
+## Changes and logs
+`git status`
+`git diff <filename>` or `<sha code>` _get differences_
 git log (Find log file)
 git log --graph (the log file with branch merges info)
 git log --pretty=oneline (show all commits in "one line per commit" format)
