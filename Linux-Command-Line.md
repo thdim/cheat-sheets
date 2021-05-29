@@ -67,4 +67,5 @@ __basic folders__
 ## Hostinger SSH
 `rm -rf /.cagefs/tmp/*` _clean temp, reduce "Order Inodes"_  
 `find domains/ -type f | wc -l` _count all files in the domains/_  
-`tree domains/` _list all files in a tree_
+`tree domains/` _list all files in a tree_  
+`rm -r *` _clean all files and directories (first navigate into the folder)_
