@@ -65,4 +65,6 @@ __basic folders__
 `^W` _search forward to current position_  
 
 ## Hostinger SSH
-`rm -rf /.cagefs/tmp/*` _clean temp, reduce "Order Inodes"_
+`rm -rf /.cagefs/tmp/*` _clean temp, reduce "Order Inodes"_  
+`find domains/ -type f | wc -l` _count all files in the domains/_  
+`tree domains/` _list all files in a tree_
