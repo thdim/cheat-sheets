@@ -7,7 +7,7 @@ __401__ - Unauthorized
 __403__ - Forbidden  
 __404__ - Not Found    
 __405__ - Method Not Allowed  
-__409__ - Conflict  
+__409__ - Conflict _(e.g. username exist)_    
 
 __500__ - Internal Server Error  
 
