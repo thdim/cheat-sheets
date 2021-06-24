@@ -2,7 +2,7 @@
 __200__ - OK  
 __201__ - Created  
 
-__400__ - Bad Request _bad supplied data (urls, headers or JSON)_   
+__400__ - Bad Request _(bad supplied data from urls, headers or JSON)_   
 __401__ - Unauthorized  
 __403__ - Forbidden  
 __404__ - Not Found    
