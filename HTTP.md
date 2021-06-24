@@ -2,10 +2,10 @@
 __200__ - OK  
 __201__ - Created  
 
-__400__ - Bad Request  
+__400__ - Bad Request _bad supplied data (urls, headers or JSON)_   
 __401__ - Unauthorized  
 __403__ - Forbidden  
-__404__ - Not Found  
+__404__ - Not Found    
 __405__ - Method Not Allowed  
 __409__ - Conflict  
 
