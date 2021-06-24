@@ -13,4 +13,5 @@ __405__ - Method Not Allowed
 __409__ - Conflict _(e.g. username exist)_    
 
 __500__ - Internal Server Error  
+_database interaction errors_
 
