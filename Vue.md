@@ -20,4 +20,4 @@ _Output raw HTML_
 `<p v-html="varParagraph"></p>`  
 
 _Event binding_  
-`<button v-on:click="addMethod()">Add</button>`
+`<button v-on:click="addMethod">Add</button>`
