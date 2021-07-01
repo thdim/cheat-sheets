@@ -24,10 +24,12 @@ Event Binding
 `<button v-on:click="removeMethod(arg)">Remove</button>`  
 
 Native Event Object  
-`<input type="text" v-on:input="setName">` _when you point to a method_  
+_when you point to a method_  
+`<input type="text" v-on:input="setName">`   
 `setName(event) { return event.target.value }`  
 
-`<input type="text" v-on:input="setName($event, 'varchar')">` _when you need to send an argument use $event_   
+_when you need to send an argument use $event_  
+`<input type="text" v-on:input="setName($event, 'varchar')">`   
 `setName(event, lastname) { return event.target.value + ' ' + lastname }`  
 
 
