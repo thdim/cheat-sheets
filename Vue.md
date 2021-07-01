@@ -19,6 +19,9 @@ Call method
 Output raw HTML  
 `<p v-html="varParagraph"></p>`  
 
+Show the first value and preserve it  
+`<p v-once>{{ varName }}</p>`  
+
 ### Event Binding  
 `<button v-on:click="addMethod">Add</button>`  
 `<button v-on:click="removeMethod(arg)">Remove</button>`  
