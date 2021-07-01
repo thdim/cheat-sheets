@@ -57,6 +57,7 @@ Notes:
 _Methods should be named with the same name as a data property_  
 _This naming will create a connection and the watcher will executed each time the data property changes_  
 _Watchers don't return anything, the value is the latest value of the data propetry_  
+_Can also accept `name(newValue, oldValue)`_  
 
 ### Event Binding  
 `<button v-on:click="addMethod">Add</button>`  
