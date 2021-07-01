@@ -1,23 +1,23 @@
 # The basics
 
-_Data option: return an object with variables_  
+Data option: return an object with variables  
 `data() { return { varName: 'Name' } }`  
 
-_Interpolation_  
+Interpolation  
 `{{ varName }}`  
 
-_Data binding_  
+Data binding  
 `v-bind:href="varLink"` _or_ `:href="varLink"`  
 `v-bind:class="varClass"` _or_ `:class="varClass"`  
 
-_Methods option (pass a JS object with functions)_  
+Methods option (pass a JS object with functions)  
 `methods: { functionName() { return this.varName } }`  
 
-_Call method_  
+Call method  
 `{{ functionName() }}`  
 
-_Output raw HTML_  
+Output raw HTML  
 `<p v-html="varParagraph"></p>`  
 
-_Event binding_  
+Event binding  
 `<button v-on:click="addMethod">Add</button>`
