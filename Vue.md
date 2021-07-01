@@ -32,11 +32,12 @@ _when you need to send an argument use $event_
 `<input type="text" v-on:input="setName($event, 'varchar')">`   
 `setName(event, lastname) { return event.target.value + ' ' + lastname }`  
 
-### Event Modifiers  
+### Event Modifiers (with dot)  
 _prevent default form submit_  
 `<form v-on:submit.prevent="submitForm"></form>`  
 
-_react to a behaviour with right click (default left)_  
-`<button v-on:click.right="addMethod">Add</button>`  
+_react to a behaviour with middle click (default left)_  
+`<button v-on:click.middle="addMethod">Add</button>`  
 
-
+_listen to a key with modifier_  
+`v-on:keyup.enter` _or_ `v-on:keyup.cntr`  
