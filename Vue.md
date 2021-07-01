@@ -1,17 +1,26 @@
 # The basics
 
-Data (return an object with variables)  
-`data() { return { varName: 'Name' } }`  
+#### Data configuration option  
+`data() {`   
+  `return { `  
+    `name: 'Name',`  
+    `surname: 'Surname'`  
+  `}`  
+`}`  
 
 Interpolation  
-`{{ varName }}`  
+`{{ name }}`  
 
 Data Binding  
 `v-bind:href="varLink"` _or_ `:href="varLink"`  
 `v-bind:class="varClass"` _or_ `:class="varClass"`  
 
-Methods (pass a JS object with functions)  
-`methods: { functionName() { return this.varName } }`  
+#### Methods configuration option
+`methods: {`  
+  `methodName() {`  
+    `return this.name`  
+  `}`  
+`}`  
 
 Call method  
 `{{ functionName() }}`  
@@ -20,7 +29,21 @@ Output raw HTML
 `<p v-html="varParagraph"></p>`  
 
 Show the first value and preserve it  
-`<p v-once>{{ varName }}</p>`  
+`<p v-once>{{ name }}</p>`  
+
+#### Computed configuration option  
+
+`computed: {`  
+  `method() {`  
+    `return this.varName`  
+  `}`  
+`}`  
+
+Notes:   
+_Name your computed methods as you would name a data property_  
+_To use it `{{ method }}`, NOT `{{ method() }}` (Vue will call it automatically)_  
+_Computed will check the code and update the DOM only when something is used_  
+_In most scenarios we use computed, except in events since only methods allowed_  
 
 ### Event Binding  
 `<button v-on:click="addMethod">Add</button>`  
@@ -44,3 +67,7 @@ _react to a behaviour with middle click (default left)_
 
 _listen to a key with modifier_  
 `v-on:keyup.enter` _or_ `v-on:keydown.cntr`  
+
+### Two-way Binding  
+`<input type="text" v-model="varName">`  
+
