@@ -40,4 +40,4 @@ _react to a behaviour with middle click (default left)_
 `<button v-on:click.middle="addMethod">Add</button>`  
 
 _listen to a key with modifier_  
-`v-on:keyup.enter` _or_ `v-on:keyup.cntr`  
+`v-on:keyup.enter` _or_ `v-on:keydown.cntr`  
