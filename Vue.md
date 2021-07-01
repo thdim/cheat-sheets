@@ -19,11 +19,11 @@ Call method
 Output raw HTML  
 `<p v-html="varParagraph"></p>`  
 
-Event Binding  
+### Event Binding  
 `<button v-on:click="addMethod">Add</button>`  
 `<button v-on:click="removeMethod(arg)">Remove</button>`  
 
-Native Event Object  
+### Native Event Object  
 _when you point to a method_  
 `<input type="text" v-on:input="setName">`   
 `setName(event) { return event.target.value }`  
@@ -32,7 +32,7 @@ _when you need to send an argument use $event_
 `<input type="text" v-on:input="setName($event, 'varchar')">`   
 `setName(event, lastname) { return event.target.value + ' ' + lastname }`  
 
-Event Modifiers  
+### Event Modifiers  
 _prevent default form submit_  
 `<form v-on:submit.prevent="submitForm"></form>`  
 
