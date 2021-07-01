@@ -4,7 +4,7 @@
 `data() {`   
   `return { `  
     `name: 'Name',`  
-    `surname: 'Surname'`  
+    `fullname: ''`  
   `}`  
 `}`  
 
@@ -44,6 +44,19 @@ _Name your computed methods as you would name a data property_
 _To use it `{{ method }}`, NOT `{{ method() }}` (Vue will call it automatically)_  
 _Computed will check the code and update the DOM only when something is used_  
 _In most scenarios we use computed, except in events since only methods allowed_  
+
+#### Watch configuration option
+
+`watch: {`  
+  `name(value) {`  
+    `this.fullname = value + ' ' + 'Dimitriou'`  
+  `}`  
+`}`  
+
+Notes:  
+_Methods should be named with the same name as a data property_  
+_This naming will create a connection and the watcher will executed each time the data property changes_  
+_Watchers don't return anything, the value is the latest value of the data propetry_  
 
 ### Event Binding  
 `<button v-on:click="addMethod">Add</button>`  
