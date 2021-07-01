@@ -15,7 +15,18 @@ Data Binding
 `v-bind:href="varLink"` _or_ `:href="varLink"`  
 `v-bind:class="varClass"` _or_ `:class="varClass"`  
 
-#### Methods configuration option
+Output raw HTML  
+`<p v-html="varParagraph"></p>`  
+
+Show the first value and preserve it  
+`<p v-once>{{ name }}</p>`  
+
+### Methods vs Computed vs Watch  
+#### Methods
+Use with event binding or data binding  
+Data binding: Method is executed for every "re-render" cyrcle of the component  
+Use for events of data that really needs to be re-evaluated all the time  
+
 `methods: {`  
   `methodName() {`  
     `return this.name`  
@@ -25,13 +36,9 @@ Data Binding
 Call method  
 `{{ functionName() }}`  
 
-Output raw HTML  
-`<p v-html="varParagraph"></p>`  
+#### Computed  
 
-Show the first value and preserve it  
-`<p v-once>{{ name }}</p>`  
-
-#### Computed configuration option  
+COPY FROM VIDEO
 
 `computed: {`  
   `method() {`  
@@ -45,7 +52,7 @@ _To use it `{{ method }}`, NOT `{{ method() }}` (Vue will call it automatically)
 _Computed will check the code and update the DOM only when something is used_  
 _In most scenarios we use computed, except in events since only methods allowed_  
 
-#### Watch configuration option
+#### Watch  
 
 `watch: {`  
   `counter(value) {`  
@@ -58,6 +65,7 @@ _Methods should be named with the same name as a data property_
 _This naming will create a connection and the watcher will executed each time the data property changes_  
 _Watchers don't return and the value is the latest value of the data propetry_  
 _Can also accept `name(newValue, oldValue)`_  
+
 
 ### Event Binding  
 `<button v-on:click="addMethod">Add</button>`  
