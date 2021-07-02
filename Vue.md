@@ -1,6 +1,6 @@
 # The basics
 
-#### Data configuration option  
+### Data configuration option  
 `data() {`   
   `return { `  
     `name: 'Name',`  
@@ -97,4 +97,11 @@ _listen to a key with modifier_
 
 ### Two-way Binding  
 `<input type="text" v-model="varName">`  
+
+### Dynamic Styling  
+
+#### Inline Styling  
+bind style border-color (borderColor) to red if dataPropetry is true and to #ccc is not  
+`<div class="demo" :style="{borderColor: dataProperty ? 'red' : '#ccc'}">`  
+
 
