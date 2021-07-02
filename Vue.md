@@ -4,7 +4,7 @@
 `data() {`   
   `return { `  
     `name: 'Name',`  
-    `fullname: '',`
+    `fullname: '',`  
     `link: '',`  
     `class: '',`  
   `}`  
