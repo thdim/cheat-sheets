@@ -4,7 +4,9 @@
 `data() {`   
   `return { `  
     `name: 'Name',`  
-    `fullname: ''`  
+    `fullname: '',`
+    `link: '',`  
+    `class: '',`  
   `}`  
 `}`  
 
@@ -12,11 +14,11 @@ Interpolation
 `{{ name }}`  
 
 Data Binding  
-`v-bind:href="varLink"` _or_ `:href="varLink"`  
-`v-bind:class="varClass"` _or_ `:class="varClass"`  
+`v-bind:href="link"` _or_ `:href="link"`  
+`v-bind:class="class"` _or_ `:class="class"`  
 
 Output raw HTML  
-`<p v-html="varParagraph"></p>`  
+`<p v-html="paragraph"></p>`  
 
 Show the first value and preserve it  
 `<p v-once>{{ name }}</p>`  
@@ -71,8 +73,8 @@ _Can also accept `name(newValue, oldValue)`_
 
 
 ### Event Binding  
-`<button v-on:click="addMethod">Add</button>`  
-`<button v-on:click="removeMethod(arg)">Remove</button>`  
+`<button v-on:click="addMethod">Add</button>` _or_ `<button @click="addMethod">Add</button>`  
+`<button v-on:click="removeMethod(arg)">Remove</button>` _or_ `<button @click="removeMethod(arg)">Remove</button>`   
 
 ### Native Event Object  
 _when you point to a method_  
