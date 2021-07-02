@@ -130,6 +130,8 @@ Notes:
 _inside the "" can be any expression that can be interpreted as a true/false_  
 _conditions can be compined with && or ||_  
 _can point to a method or a computed propetry_  
+_v-if adds and removes from the DOM_  
+_v-show works in the same way but shows hides with CSS_  
 
 #### v-else
 `<p v-if="_condition_"></p>`  
@@ -137,3 +139,10 @@ _can point to a method or a computed propetry_
 
 Notes:  
 _v-else needs to be used in an html element that it's next to the v-if element_  
+
+### v-for  
+`<li v-for="row in array">{{ row }}</li>` _loop in arrays_  
+`<li v-for="(row, index) in array">{{ index }}: {{ row }}</li>` _get index_    
+`<li v-for="value in {name: 'Themis', age: 38}"></li>` _poop in objects_  
+
+
