@@ -112,7 +112,8 @@ Ternary oparation in class binding
 
 Always bind demo class and bind active if dataPropetry is true  
 `<div :class="{demo: true, active: dataProperty}">` _or_  
-`<div class="demo" :class="{active: dataProperty}">`  
+`<div class="demo" :class="{active: dataProperty}">` _or_  
+`<div :class="['demo', {active: dataPropetry}]">`  
 
 For more complex cases, use computed  
 `<div :class="boxClass">`  
