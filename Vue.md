@@ -1,4 +1,4 @@
-# The basics
+# The Basics
 
 ### Data configuration option  
 `data() {`   
@@ -102,12 +102,12 @@ _listen to a key with modifier_
 
 #### Inline Styling  
 
-bind style border-color (borderColor) to red if dataPropetry is true and to #ccc is not  
+_bind style border-color (borderColor) to red if dataPropetry is true and to #ccc is not_  
 `<div class="demo" :style="{borderColor: dataProperty ? 'red' : '#ccc'}">`  
 
 #### CSS Classes  
 
-Ternary oparation in class binding  
+_Ternary oparation in class binding_  
 `<div :class="dataProperty ? 'demo active' : 'demo'">`  
 
 Always bind demo class and bind active if dataPropetry is true  
@@ -119,4 +119,21 @@ For more complex cases, use computed
 `<div :class="boxClass">`  
 `computed: { boxClass() { return { active: this.boxSelected }; } }`
 
+# Conditional Content & Lists
 
+### v-if, v-else, v-else-if
+
+#### v-if
+`<p v-if="dataPropetry.lenght === 0"></p>`  
+
+Notes:  
+_inside the "" can be any expression that can be interpreted as a true/false_  
+_conditions can be compined with && or ||_  
+_can point to a method or a computed propetry_  
+
+#### v-else
+`<p v-if="_condition_"></p>`  
+`<p v-else></p>`  
+
+Notes:  
+_v-else needs to be used in an html element that it's next to the v-if element_  
