@@ -168,3 +168,4 @@ _v-else needs to be used in an html element that it's next to the v-if element_
 `beforeCreate()`  
 `created()`  
 `beforeMount()`  
+`mounted()`  
