@@ -155,4 +155,9 @@ _v-else needs to be used in an html element that it's next to the v-if element_
 `<li v-for="num in 10">{{ num }}</li>`  _loop from 1 to 10_  
 `<li v-for="(row, index) in array" :key="row['id']">{{ index }}: {{ row['name'] }}</li>` _bind key (:key)_    
 
+## Refs  
+`<input type="text" ref="userInput">`  _set a ref with key 'userInput'_  
+`this.$refs.userInput.value` _use it in vue_  
 
+Notes:  
+_Use refs when you don't need to update in each keystroke as with v-model (e.g. when you have a save button)_  
