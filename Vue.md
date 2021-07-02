@@ -110,10 +110,8 @@ bind style border-color (borderColor) to red if dataPropetry is true and to #ccc
 Ternary oparation in class binding  
 `<div :class="dataProperty ? 'demo active' : 'demo'">`  
 
-_or_    
-
 always bind demo class and bind active if dataPropetry is true  
-`<div :class="{demo: true, active: dataProperty}">`  
+`<div :class="{demo: true, active: dataProperty}">` _or_  
 `<div class="demo" :class="{active: dataProperty}">`
 
 
