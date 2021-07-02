@@ -95,6 +95,9 @@ _react to a behaviour with middle click (default left)_
 _listen to a key with modifier_  
 `v-on:keyup.enter` _or_ `v-on:keydown.cntr`  
 
+_stop_  
+`@click.stop` _.stop will cancel a parent @click in the selected element_  
+
 ### Two-way Binding  
 `<input type="text" v-model="varName">`  
 
