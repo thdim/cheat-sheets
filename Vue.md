@@ -164,12 +164,12 @@ _v-else needs to be used in an html element that it's next to the v-if element_
 
 # Vue Instance Lifecyrcle
 
-`createApp({})`  
+_createApp({})_  
 `beforeCreate()`  
 `created()`  
 `beforeMount()`  
 `mounted()`  
-_data change_
+_data change_  
 `berofeUpdate()`  
 `updated()`  
 _instance unmounted_  
