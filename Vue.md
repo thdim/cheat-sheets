@@ -37,8 +37,9 @@ Call method
 `{{ functionName() }}`  
 
 #### Computed  
-
-COPY FROM VIDEO
+Use with data binding  
+Computed properties are only re-evaluated if one of their "used values" changed  
+Use for data that depends on other data  
 
 `computed: {`  
   `method() {`  
@@ -48,11 +49,13 @@ COPY FROM VIDEO
 
 Notes:   
 _Name your computed methods as you would name a data property_  
-_To use it `{{ method }}`, NOT `{{ method() }}` (Vue will call it automatically)_  
-_Computed will check the code and update the DOM only when something is used_  
+_To use it `{{ method }}`, NOT `{{ method() }}` (Vue will call it automatically)_   
 _In most scenarios we use computed, except in events since only methods allowed_  
 
 #### Watch  
+Not used directly in template  
+Allows you to run and ccode in reaction to some changed data (e.g. send Http requests etc.)  
+Use for any non-data update you want to make  
 
 `watch: {`  
   `counter(value) {`  
