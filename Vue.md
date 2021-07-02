@@ -143,6 +143,7 @@ _v-else needs to be used in an html element that it's next to the v-if element_
 ### v-for  
 `<li v-for="row in array">{{ row }}</li>` _loop in arrays_  
 `<li v-for="(row, index) in array">{{ index }}: {{ row }}</li>` _get index_    
-`<li v-for="value in {name: 'Themis', age: 38}"></li>` _poop in objects_  
+`<li v-for="(value, key) in {name: 'Themis', age: 38}">{{ key }}: {{ value }}</li>` _loop in objects_  
+`<li v-for="num in 10">{{ num }}</li>`  _loop from 1 to 10_  
 
 
