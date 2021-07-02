@@ -1,6 +1,11 @@
 # The Basics
 
 ### Data configuration option  
+Create a Vue App  
+`const app = Vue.createApp({ data(), methods: {}, computed: {}, watch: {} });`  
+`app.mount('#id');`  
+
+The data() properties  
 `data() {`   
   `return { `  
     `name: 'Name',`  
