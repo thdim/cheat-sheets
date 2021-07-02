@@ -104,4 +104,12 @@ _listen to a key with modifier_
 bind style border-color (borderColor) to red if dataPropetry is true and to #ccc is not  
 `<div class="demo" :style="{borderColor: dataProperty ? 'red' : '#ccc'}">`  
 
+#### CSS Classes  
+
+Ternary oparation in class binding  
+`<div :class="dataProperty ? 'demo active' : 'demo'">` _or_  
+
+always bind demo class and bind active if dataPropetry is true
+`<div :class="{demo: true, active: dataProperty}">`
+
 
