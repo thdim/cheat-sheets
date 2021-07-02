@@ -169,3 +169,9 @@ _v-else needs to be used in an html element that it's next to the v-if element_
 `created()`  
 `beforeMount()`  
 `mounted()`  
+_data change_
+`berofeUpdate()`  
+`updated()`  
+_instance unmounted_  
+`beforeUnmount()`  
+`unmounted`  
