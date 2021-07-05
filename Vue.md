@@ -175,3 +175,24 @@ _data change_
 _instance unmounted_  
 `beforeUnmount()`  
 `unmounted`  
+
+# Components
+
+In a new .vue file have a `<template></template>` and `<script>export default { data() { ... } }`  
+
+### Global component
+`import TheComponent from './relative/path'`  
+`app.component('the-component', TheComponent)`  
+
+### Local component
+`import TheComponent from './relative/path'`  
+`components: { TheComponent }, data() { ... }`    
+
+## Props  
+`<the-component template="destination"></the-component>` 
+
+In the component  
+`props: ['template'],`  _access prop template_  
+
+
+
