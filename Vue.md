@@ -208,6 +208,9 @@ Bind props
 `<the-component :prop2="true"></the-component>` _if you want any other value than string you need to bind the value (or if they are dynamic anyway)_  
 
 ### Emits  
-You can call from inside the component  
+Emit from inside the component  
 `this.$emit('custom-event-name')`  
+
+Listen it in the parent  
+`<the-component @custom-event-name="callMethod"></the-component>`  
 
