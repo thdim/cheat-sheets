@@ -195,7 +195,19 @@ In the parent template
 `<the-component prop1="..."></the-component>` 
 
 In the component  
-`props: ['prop1'],`  _access prop template_  
+_basic config_  
+`props: ['prop1'],`  _access prop template_    
 
+_only type congig_  
+`props: { prop1: String|Number|Boolean|Array|Object|Date }`  
 
+_full config_  
+`props: { prop1: { type: String, required: false, default: 0 } }` (also validator: function() {} is possible, check documentation)  
+
+Bind props  
+`<the-component :prop2="true"></the-component>` _if you want any other value than string you need to bind the value (or if they are dynamic anyway)_  
+
+### Emits  
+You can call from inside the component  
+`this.$emit('custom-event-name')`  
 
