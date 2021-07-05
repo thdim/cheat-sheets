@@ -68,7 +68,7 @@ _In most scenarios we use computed, except in events since only methods allowed_
 
 #### Watch  
 Not used directly in template  
-Allows you to run and ccode in reaction to some changed data (e.g. send Http requests etc.)  
+Allows you to run and code in reaction to some changed data (e.g. send Http requests etc.)  
 Use for any non-data update you want to make  
 
 `watch: {`  
