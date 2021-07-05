@@ -180,15 +180,15 @@ _instance unmounted_
 
 In a new .vue file have a `<template></template>` and `<script>export default { data() { ... } }`  
 
-### Global component
+#### Global component
 `import TheComponent from './relative/path'`  
 `app.component('the-component', TheComponent)`  
 
-### Local component
+#### Local component
 `import TheComponent from './relative/path'`  
 `components: { TheComponent }, data() { ... }`    
 
-## Props  
+### Props  
 `<the-component template="destination"></the-component>` 
 
 In the component  
