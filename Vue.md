@@ -218,3 +218,7 @@ Listen it in the parent
 To define emits (optionally)  
 `emits: ['custom-event-name']`  
 
+### Provide & Inject  
+_used when you want to communicate between components that are having a pass-thew component_  
+
+
