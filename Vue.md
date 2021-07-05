@@ -213,5 +213,8 @@ Emit from inside the component
 
 Listen it in the parent  
 `<the-component @custom-event-name="callMethod"></the-component>`  
-`callMethod(argument) { ... }`
+`callMethod(argument) { ... }`  
+
+To define emits (optionally)  
+`emits: ['custom-event-name']`  
 
