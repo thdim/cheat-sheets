@@ -209,8 +209,9 @@ Bind props
 
 ### Emits  
 Emit from inside the component  
-`this.$emit('custom-event-name')`  
+`this.$emit('custom-event-name', argument)`  
 
 Listen it in the parent  
 `<the-component @custom-event-name="callMethod"></the-component>`  
+`callMethod(argument) { ... }`
 
