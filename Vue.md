@@ -189,10 +189,13 @@ In a new .vue file have a `<template></template>` and `<script>export default { 
 `components: { TheComponent }, data() { ... }`    
 
 ### Props  
-`<the-component template="destination"></the-component>` 
+
+Parent --> Child Communication  
+In the parent template
+`<the-component prop1="..."></the-component>` 
 
 In the component  
-`props: ['template'],`  _access prop template_  
+`props: ['prop1'],`  _access prop template_  
 
 
 
