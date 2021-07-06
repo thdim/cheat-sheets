@@ -221,4 +221,8 @@ To define emits (optionally)
 ### Provide & Inject  
 _used when you want to communicate between components that are having a pass-thew component_  
 
+### Scoped Styles
+_when using scoped the css will apply only in the template of the same component_  
+`<style scoped>`  
+
 
