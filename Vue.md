@@ -238,5 +238,5 @@ _they are used when we want to use a component as a wrapper of HTML and dynamic 
 
 Named slots  
 `<slot name="my-slot-name"></slot>`  _declare them in the child_  
-`<template v-slot:tbody> ... </template>` _target them in the parent_  
+`<template v-slot:tbody> ... </template>` _target them in the parent (use v-slot:default to target the not named)_  
 
