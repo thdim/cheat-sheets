@@ -229,7 +229,7 @@ _when using scoped the css will apply only in the template of the same component
 In the child component  
 `<slot>`  
 
-In the parent component
+In the parent component  
 `<custom-component> ... HTML and Vue code ...</custom-component>`  
 
 Notes  
