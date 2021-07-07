@@ -225,4 +225,18 @@ _used when you want to communicate between components that are having a pass-the
 _when using scoped the css will apply only in the template of the same component_  
 `<style scoped>`  
 
+### Slotes  
+In the child component  
+`<slot>`  
+
+In the parent component
+`<custom-component> ... HTML and Vue code ...</custom-component>`  
+
+Notes  
+_slotes are like props but for HTML and Vue code_  
+_they are used when we want to use a component as a wrapper of HTML and dynamic content_  
+
+Named slots  
+`<slot name="my-slot-name"></slot>`  _declare them in the child_  
+`<template v-slot:tbody> ... </template>` _target them in the parent_  
 
