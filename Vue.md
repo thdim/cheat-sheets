@@ -221,6 +221,9 @@ To define emits (optionally)
 ### Provide & Inject  
 _used when you want to communicate between components that are having a pass-thew component_  
 
+__WATCH 100/102 AND ADD NOTES__  
+
+
 ### Scoped Styles
 _when using scoped the css will apply only in the template of the same component_  
 `<style scoped>`  
@@ -239,4 +242,13 @@ _they are used when we want to use a component as a wrapper of HTML and dynamic 
 Named slots  
 `<slot name="my-slot-name"></slot>`  _declare them in the child_  
 `<template v-slot:tbody> ... </template>` _target them in the parent (use v-slot:default to target the not named)_  
+
+__WATCH 111/113 AND ADD NOTES__  
+
+### Dynamic Components  
+
+__WATCH 114/114 AND ADD NOTES__  
+
+
+
 
