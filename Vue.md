@@ -251,4 +251,11 @@ __WATCH 114/114 AND ADD NOTES__
 
 
 
+# Vuex  
+`npm install --save vuex`  
+
+
+
+
+
 
