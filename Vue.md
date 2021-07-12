@@ -271,13 +271,12 @@ _use this state in any component_
 
 ### Mutations  
 update the vuex store data  
+_mutations must be synchronous_  
 
-`state() {`  
-  `return { counter: 0 }`  
+`state() { ... }`  
+`mutations: {`  
+  `addOne(state) { state.counter++ }`  
 `}`  
-__`mutations: {`__  
-  __`addOne(state) { state.counter++ }`__  
-__`}`__  
 
 execute a mutation  
 `this.$store.commit('addOne')`  
@@ -287,21 +286,31 @@ _payload can be a num, string, bool or object_
 `increase(state, payload) { state.counter = state.counter + payload.value }`   
 `this.$store.commit('increase', { value: 10 })`  
 
+### Actions
+they are used in components to commit mutations  
+_actions can be unsynchronous_  
+_you can use the same name as with the mutation_  
+
+`state() { ... }`   
+`mutations: { ... }`  
+`actions: {`  
+  `increment(context) { context.commit('increment', { value: 10 } ) }`  
+`}`  
+
 ### Getters  
 get values from the vuex store data  
 
-`state() {`  
-  `return { counter: 0 }`  
+`state() { ... }`   
+`mutations: { ... }`  
+`actions: { ... }`  
+`getters: {`  
+  `finalCounter(state) { return state.counter *2 }`  
 `}`  
-`mutations: {`  
-  `addOne(state) { state.counter++ }`  
-`}`  
-__`getters: {`__  
-  __`finalCounter(state) { return state.counter *2 }`__  
-__`}`__  
 
 use getters  
 `this.$store.getters.finalCounter`  
+
+
 
 
 
