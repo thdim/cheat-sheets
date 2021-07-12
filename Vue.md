@@ -257,6 +257,7 @@ __WATCH 114/114 AND ADD NOTES__
 ### Create store
 
 `import { createStore } from 'vuex'`  
+
 _init store and create a statewide variable named counter_  
 `const store = createStore({`  
   `state() {`  
@@ -271,7 +272,14 @@ _use this state in any component_
 ### Mutations  
 
 use them to update the store data  
-``
+`const store = createStore({`  
+  `state() {`  
+    `return { counter: 0 }`  
+  `}`  
+  __`mutations: {`__  
+    __`addOne(state) { state.counter++ }`__  
+  __`}`__  
+`})`  
 
 
 
