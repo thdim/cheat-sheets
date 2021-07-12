@@ -273,10 +273,10 @@ _use this state in any component_
 update the vuex store data  
 
 `state() {`  
-  `return { counter: 0 }`  
+  `return { counter: 0 }`  
 `}`  
 __`mutations: {`__  
-  __`addOne(state) { state.counter++ }`__  
+  __`addOne(state) { state.counter++ }`__  
 __`}`__  
 
 execute a mutation  
@@ -291,13 +291,13 @@ _payload can be a num, string, bool or object_
 get values from the vuex store data  
 
 `state() {`  
-  `return { counter: 0 }`  
+  `return { counter: 0 }`  
 `}`  
 `mutations: {`  
-  `addOne(state) { state.counter++ }`  
+  `addOne(state) { state.counter++ }`  
 `}`  
 __`getters: {`__  
-  __`finalCounter(state) { return state.counter *2 }`__  
+  __`finalCounter(state) { return state.counter *2 }`__  
 __`}`__  
 
 use getters  
