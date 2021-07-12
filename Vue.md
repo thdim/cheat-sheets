@@ -270,23 +270,41 @@ _use this state in any component_
 `{{ $store.state.counter }}` _or_ `this.$store.state.counter`  
 
 ### Mutations  
+update the vuex store data  
 
-use them to update the vuex store data  
-`const store = createStore({`  
-  `state() {`  
-    `return { counter: 0 }`  
-  `}`  
-  __`mutations: {`__  
-    __`addOne(state) { state.counter++ }`__  
-  __`}`__  
-`})`  
+`state() {`  
+  `return { counter: 0 }`  
+`}`  
+__`mutations: {`__  
+  __`addOne(state) { state.counter++ }`__  
+__`}`__  
 
 execute a mutation  
 `this.$store.commit('addOne')`  
 
 commit a mutation with an argument (payload)  
+_payload can be a num, string, bool or object_  
 `increase(state, payload) { state.counter = state.counter + payload.value }`   
 `this.$store.commit('increase', { value: 10 })`  
+
+### Getters  
+get values from the vuex store data  
+
+`state() {`  
+  `return { counter: 0 }`  
+`}`  
+`mutations: {`  
+  `addOne(state) { state.counter++ }`  
+`}`  
+__`getters: {`__  
+  __`finalCounter(state) { return state.counter *2 }`__  
+__`}`__  
+
+use getters  
+`this.$store.getters.finalCounter`  
+
+
+
 
 
 
