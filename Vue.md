@@ -250,6 +250,12 @@ __WATCH 111/113 AND ADD NOTES__
 __WATCH 114/114 AND ADD NOTES__  
 
 
+# Vue Route
+
+Redirect from a component  
+`this.$route.push('/coaches')` _we can go back to the page we came_  
+`this.$route.replace('/coaches')` _we cannot go back, good for forms_  
+
 
 # Vuex  
 `npm install --save vuex`  
