@@ -292,9 +292,12 @@ _you can use the same name as with the mutation_
 
 `state() { ... }`   
 `mutations: { ... }`  
-`actions: {`  
-  `increment(context) { context.commit('increment', { value: 10 } ) }`  
-`}`  
+__`actions: {`__  
+  __`increment(context) { context.commit('increment', { value: 10 } ) }`__  
+__`}`__  
+
+_use_ in the component
+`this.$store.dispatch( { 'increment', { value: 10 } } )`  
 
 ### Getters  
 get values from the vuex store data  
@@ -302,9 +305,9 @@ get values from the vuex store data
 `state() { ... }`   
 `mutations: { ... }`  
 `actions: { ... }`  
-`getters: {`  
-  `finalCounter(state) { return state.counter *2 }`  
-`}`  
+__`getters: {`__  
+  __`finalCounter(state) { return state.counter *2 }`__  
+__`}`__  
 
 use getters  
 `this.$store.getters.finalCounter`  
