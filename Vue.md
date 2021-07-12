@@ -2,7 +2,9 @@
 [Refs](#refs)  
 [Methods](#methods)
 
-[Conditional Content & Lists](#conditional-content--lists)
+[Conditional Content & Lists](#conditional-content--lists)  
+[Vue Route](#vue-route)  
+[Vuex](#vuex)  
 
 
 # The Basics
