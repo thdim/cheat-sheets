@@ -1,9 +1,6 @@
 ##### Table of Contents  
 [Refs](#refs)  
-[Emphasis](#emphasis)  
-...snip...    
-<a name="headers"/>
-## Headers
+[Methods](#methods)
 
 
 # The Basics
