@@ -270,25 +270,24 @@ _use this state in any component_
 `{{ $store.state.counter }}` _or_ `this.$store.state.counter`  
 
 ### Mutations  
-update the vuex store data  
-_mutations must be synchronous_  
+_update the vuex store data_  
 
+#### mutations should be occured in actions  
 `state() { ... }`  
-`mutations: {`  
-  `addOne(state) { state.counter++ }`  
-`}`  
-
-execute a mutation  
+__`mutations: {`__  
+  __`addOne(state) { state.counter++ }`__  
+__`}`__  
+  
 `this.$store.commit('addOne')`  
 
-commit a mutation with an argument (payload)  
-_payload can be a num, string, bool or object_  
+mutation with a payload _can be a num, string, bool or object_  
 `increase(state, payload) { state.counter = state.counter + payload.value }`   
 `this.$store.commit('increase', { value: 10 })`  
 
 ### Actions
-they are used in components to commit mutations  
-_actions can be unsynchronous_  
+they are used in components to commit mutations   
+
+#### they commit mutations and can be unsynchronous  
 _you can use the same name as with the mutation_  
 
 `state() { ... }`   
