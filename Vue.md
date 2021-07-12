@@ -276,7 +276,7 @@ use them to update the store data
   `state() {`  
     `return { counter: 0 }`  
   `}`  
-  __`mutations: {`__  
+  __`mutations: {`__  
     __`addOne(state) { state.counter++ }`__  
   __`}`__  
 `})`  
