@@ -271,7 +271,7 @@ _use this state in any component_
 
 ### Mutations  
 
-use them to update the store data  
+use them to update the vuex store data  
 `const store = createStore({`  
   `state() {`  
     `return { counter: 0 }`  
@@ -280,6 +280,16 @@ use them to update the store data
     __`addOne(state) { state.counter++ }`__  
   __`}`__  
 `})`  
+
+execute a mutation  
+`this.$store.commit('addOne')`  
+
+commit a mutation with an argument (payload)  
+`increase(state, payload) { state.counter = state.counter + payload.value }`   
+`this.$store.commit('increase', { value: 10 })`  
+
+
+
 
 
 
