@@ -18,5 +18,6 @@ _database interaction errors_
 # HTTP Request Methods:  
 __GET__ - Transmit the data identified by the URL to the client  
 __POST__ - Create new resource/s (update and merge)  
-__PUT__ - Update a resources/s (update and overwrite)  
+__PUT__ - If resource exists then update, else create new resource (update and overwrite)  
+__PATCH__ - Always for update a resource  
 __DELETE__ - Delete a resource identified by a URI  
