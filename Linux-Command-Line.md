@@ -61,8 +61,10 @@ __basic folders__
 ## Nano
 
 `nano <filename>` _open file with nano text editor_  
-`^O` or `^S` _save changes_  
-`^W` _search forward to current position_  
+`ctrl O` or `ctrl S` _save changes_  
+`ctrl + W` _search forward to current position_  
+`ctrl + \` _search and replace_  
+`ctrl + /` _go to line_  
 
 ## Hostinger SSH
 `rm -rf /.cagefs/tmp/*` _clean temp, reduce "Order Inodes"_  
