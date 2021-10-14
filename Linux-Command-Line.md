@@ -60,11 +60,15 @@ __basic folders__
 
 ## Delete, Copy, Move
 
-`rm <filename>` _delete a file_  
-`rm <filename> <filename>` _seperate with space to remove multiple files_  
+__Delete__  
+`rm <file>` _delete a file_  
+`rm <file> <file>` _seperate with space to remove multiple files_  
 `rm -d <dir>` OR `rmdir <dir>` _remove empty directories_  
 `rm -r <dir>` _remove directories and everything inside (recursively)_  
 `rm -ri <dir>` _i = interactive, prompts removal questions (recursively)_  
+
+__Move__  
+`mv <src_file> <target_dir>` _moves a file_  
 
 ## Nano
 
