@@ -68,7 +68,8 @@ __Delete__
 `rm -ri <dir>` _i = interactive, prompts removal questions (recursively)_  
 
 __Move__  
-`mv <src_file> <target_dir>` _moves a file_  
+`mv <file> <file> <target_dir>` _moves one or more files in a directory_  
+`mv <dir>/ <dir>/ <target_dir>/` _moves one or more directories in a directory_  
 
 ## Nano
 
