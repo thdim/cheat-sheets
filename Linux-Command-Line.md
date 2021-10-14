@@ -69,7 +69,7 @@ __Delete__
 
 __Move__  
 `mv <file> <file> <target_dir>` _moves one or more files in a directory_  
-`mv <dir>/ <dir>/ <target_dir>/` _moves one or more directories in a directory (target dir must exist, otherwise it will rename the original dir *TEST THIS)_  
+`mv <dir>/ <dir>/ <target_dir>/` _moves one or more directories in a directory (target dir must exist)_  
 
 ## Nano
 
