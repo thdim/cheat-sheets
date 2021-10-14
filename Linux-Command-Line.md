@@ -58,6 +58,14 @@ __basic folders__
 `mkdir <folder> <folder>` _create multiple new directories_  
 `mkdir -p <parent>/<child>` _create parent directory (and child)_  
 
+## Delete, Copy, Move
+
+`rm <filename>` _delete a file_  
+`rm <filename> <filename>` _seperate with space to remove multiple files_  
+`rm -d <dir>` OR `rmdir <dir>` _remove empty directories_  
+`rm -r <dir>` _remove directories and everything inside (recursively)_  
+`rm -ri <dir>` _i = interactive, prompts removal questions (recursively)_  
+
 ## Nano
 
 `nano <filename>` _open file with nano text editor_  
