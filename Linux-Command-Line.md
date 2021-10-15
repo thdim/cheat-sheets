@@ -71,6 +71,9 @@ __Move__
 `mv <file> <file> <target_dir>` _moves one or more files in a directory_  
 `mv <dir>/ <dir>/ <target_dir>/` _moves one or more directories in a directory (target dir must exist)_  
 
+__Copy__  
+`cp <source> <target>` _copy source to target_  
+
 ## Nano
 
 `nano <filename>` _open file with nano text editor_  
