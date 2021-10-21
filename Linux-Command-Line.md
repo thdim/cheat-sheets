@@ -73,6 +73,17 @@ __Move__
 
 __Copy__  
 `cp <source> <target>` _copy source to target_  
+`cp -r <source_dir> <target_dir>` _-r is needed to copy directories_  
+
+## Shortcuts & History  
+
+`ctrl + l` _clear screen_  
+`ctrl + a` _move at the Start of the line_  
+`ctrl + e` _move in the End of the line_  
+
+`alt + f` _moves the cursor one word forward_  
+`alt + b` _moves the cursor one word backward_  
+
 
 ## Nano
 
