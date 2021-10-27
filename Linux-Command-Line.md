@@ -84,6 +84,8 @@ __Copy__
 `alt + f` _moves the cursor one word forward_  
 `alt + b` _moves the cursor one word backward_  
 
+`history | less` _will show the cmds history per page (arrows will go down per line, shift will go down per page)_  
+`!<num-in-history>` _will execute the cmnd in the given line of history_  
 
 ## Nano
 
