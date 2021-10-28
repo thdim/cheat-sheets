@@ -87,6 +87,12 @@ __Copy__
 `history | less` _will show the cmds history per page (arrows will go down per line, shift will go down per page)_  
 `!<num-in-history>` _will execute the cmnd in the given line of history_  
 
+## Files
+
+`cat <file>` _read and display the contents of a file_  
+`less <file>` _read and interactivly display the contents of a file_  
+`tac <file>` _like cat but in reverse order (start to end)_  
+
 ## Nano
 
 `nano <filename>` _open file with nano text editor_  
