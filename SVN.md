@@ -15,3 +15,7 @@ M
 `rm <filename>` and `rm -f <folder>`  remove files from docker
 
 
+## New Branch
+
+`right click in /trunk and go to "TortoiseSVN" -> "Branch/tag"`  
+`go to /src/braches and type svn checkout <url of the branch>`  
