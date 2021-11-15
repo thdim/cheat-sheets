@@ -9,7 +9,9 @@ M
 ?  
 
 
-`svn update <filename>` Merge one file    
-`svn update .` Merge all with M and * - (r) mark resolved
-`svn revert <filename>` Revert to the latest from the live repository
-`rm <filename>`
+`svn update <filename>` Merge one file  
+`svn update .` Merge all with M and * - (r) mark resolved  
+`svn revert <filename>` Revert to the latest from the live repository  
+`rm <filename>` and `rm -f <folder>`  remove files from docker
+
+
