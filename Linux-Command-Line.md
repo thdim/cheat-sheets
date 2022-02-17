@@ -92,6 +92,12 @@ __Copy__
 `cat <file>` _read and display the contents of a file_  
 `less <file>` _read and interactivly display the contents of a file_  
 `tac <file>` _like cat but in reverse order (start to end)_  
+`tail -<num> <file>` _Show the last n number of lines in a file_  
+`head -<num> <file>` _SHow the top n number of lines in a file_  
+`wc -l <file>` _Count the number of lines in a file_  
+`wc -w <file>` _Count the number of words in a file_  
+`sort <file>` _Sort the content of a file with ABC mode_  
+`sort -r <file>` _Sort in reversed order_  
 
 ## Nano
 
