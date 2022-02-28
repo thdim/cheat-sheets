@@ -142,36 +142,27 @@ services:
     enviroment:    
       MONGO_INITDB_ROOT_USERNAME: themis
     env_file:  
-&nbsp;&nbsp;&nbsp;&nbsp;_# OR_  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- ./env/mongo.env`    
-&nbsp;&nbsp;`backend:`  
-&nbsp;&nbsp;&nbsp;&nbsp;`build: ./backend`  
-&nbsp;&nbsp;&nbsp;&nbsp;_# OR_    
-&nbsp;&nbsp;&nbsp;&nbsp;`build:`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`context: ./backend`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`dockerfile: Dockerfile`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`args: `  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`some-arg: 1`  
-&nbsp;&nbsp;&nbsp;&nbsp;`ports:`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- '80:80'`  
-&nbsp;&nbsp;&nbsp;&nbsp;`volumes:`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- logs:/app/logs`    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- ./backend:/app`  
-&nbsp;&nbsp;&nbsp;&nbsp;`depends_on: `  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- mongodb` 
-&nbsp;&nbsp;`frontend:`  
-&nbsp;&nbsp;&nbsp;&nbsp;`build: ./frontend`  
-&nbsp;&nbsp;&nbsp;&nbsp;`volumes:`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- ./frontend/src:/app/src`  
-&nbsp;&nbsp;&nbsp;&nbsp;`stdin_open: true`  
-&nbsp;&nbsp;&nbsp;&nbsp;`tty: true`  
-&nbsp;&nbsp;&nbsp;&nbsp;`depends_on: `  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- backend`  
-
-`volumes:`  
-&nbsp;&nbsp;`data:` _this needs to be specified if we use named volumes (it's weird but this is the syntax)_  
-&nbsp;&nbsp;`logs:`
-
+      - ./env/mongo.env    
+  backend:     
+    build:  
+      context: ./backend  
+      dockerfile: Dockerfile  
+    ports:  
+      - '80:80'  
+    volumes:  
+      - logs:/app/logs    
+      - ./backend:/app  
+    depends_on:  
+      - mongodb  
+  frontend:  
+    build: ./frontend  
+    volumes:  
+      - ./frontend/src:/app/src  
+    stdin_open: true  
+    tty: true  
+    depends_on:  
+      - backend
+```
 
 __notes__  
 `version` _the docker compose version https://docs.docker.com/compose/compose-file/compose-versioning/_  
