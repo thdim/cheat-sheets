@@ -43,21 +43,23 @@ __execute__
 
 __Dockerfile example for a Node.js app__
 
-`FROM node:14`
+```
+FROM node:14  
 
-`WORKDIR /var/www/app`
+WORKDIR /var/www/app  
 
-`COPY package.json .`
+COPY package.json .  
 
-`RUN npm install`
+RUN npm install  
 
-`COPY . .`
+COPY . .  
 
-`ENV PORT 80`
+ENV PORT 80  
 
-`EXPOSE 80` or `EXPOSE $PORT`
+EXPOSE 80 or EXPOSE $PORT  
 
-`CMD ["node", "server.js"]`
+CMD ["node", "server.js"]
+```
 
 __notes__  
 `WORKDIR` _is where all commants will executed (in the docker)_  
@@ -129,16 +131,17 @@ _use localhost as a domain in the app, publich ports because you want to interac
 __docker-compose.yaml__  
 `# COMMENT`  
 
-`version: "3.8"`  
+```
+version: "3.8"    
 
-`services: `  
-&nbsp;&nbsp;`mongodb:`  
-&nbsp;&nbsp;&nbsp;&nbsp;`image: mongo`  
-&nbsp;&nbsp;&nbsp;&nbsp;`volumes:`  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- data:/data/db`  
-&nbsp;&nbsp;&nbsp;&nbsp;`enviroment:`    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`MONGO_INITDB_ROOT_USERNAME: themis` or `- MONGO_INITDB_ROOT_USERNAME=themis`  
-&nbsp;&nbsp;&nbsp;&nbsp;`env_file:`  
+services:  
+  mongodb:  
+    image: mongo  
+    volumes:  
+      - data:/data/db  
+    enviroment:    
+      MONGO_INITDB_ROOT_USERNAME: themis
+    env_file:  
 &nbsp;&nbsp;&nbsp;&nbsp;_# OR_  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`- ./env/mongo.env`    
 &nbsp;&nbsp;`backend:`  
