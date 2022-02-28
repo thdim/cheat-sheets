@@ -15,14 +15,16 @@ Create a Vue App
 `app.mount('#id');`  
 
 The data() properties  
-`data() {`   
-  `return { `  
-    `name: 'Name',`  
-    `fullname: '',`  
-    `link: '',`  
-    `class: '',`  
-  `}`  
-`}`  
+```
+data() {   
+  return {   
+    name: 'Name',  
+    fullname: '',  
+    link: '',  
+    class: '',  
+  }  
+}  
+```
 
 Interpolation  
 `{{ name }}`  
@@ -50,11 +52,13 @@ Use with event binding or data binding
 Data binding: Method is executed for every "re-render" cyrcle of the component  
 Use for events of data that really needs to be re-evaluated all the time  
 
-`methods: {`  
-  `methodName() {`  
-    `return this.name`  
-  `}`  
-`}`  
+```
+methods: {  
+  methodName() {  
+    return this.name  
+  }  
+}
+```
 
 Call method  
 `{{ functionName() }}`  
@@ -64,11 +68,13 @@ Use with data binding
 Computed properties are only re-evaluated if one of their "used values" changed  
 Use for data that depends on other data  
 
-`computed: {`  
-  `method() {`  
-    `return this.varName`  
-  `}`  
-`}`  
+```
+computed: {  
+  method() {  
+    return this.varName  
+  }  
+}
+```
 
 Notes:   
 _Name your computed methods as you would name a data property_  
@@ -80,11 +86,13 @@ Not used directly in template
 Allows you to run and code in reaction to some changed data (e.g. send Http requests etc.)  
 Use for any non-data update you want to make  
 
-`watch: {`  
-  `counter(value) {`  
-    `if (value > 50) { this.counter = 0 }`  
-  `}`  
-`}`  
+```
+watch: {  
+  counter(value) {  
+    if (value > 50) { this.counter = 0 }  
+  }  
+}
+```
 
 Notes:  
 _Methods should be named with the same name as a data property_  
@@ -252,11 +260,11 @@ Named slots
 `<slot name="my-slot-name"></slot>`  _declare them in the child_  
 `<template v-slot:tbody> ... </template>` _target them in the parent (use v-slot:default to target the not named)_  
 
-__WATCH 111/113 AND ADD NOTES__  
+__ADD NOTES__  
 
 ### Dynamic Components  
 
-__WATCH 114/114 AND ADD NOTES__  
+__ADD NOTES__  
 
 
 # Vue Route
@@ -274,12 +282,14 @@ Redirect from a component
 `import { createStore } from 'vuex'`  
 
 _init store and create a statewide variable named counter_  
-`const store = createStore({`  
-  `state() {`  
-    `return { counter: 0 }`  
-  `}`  
-`})`  
-`app.use(store)`  
+```
+const store = createStore({  
+  state() {  
+    return { counter: 0 }  
+  }  
+})  
+app.use(store)
+```  
 
 _use this state in any component_  
 `{{ $store.state.counter }}` _or_ `this.$store.state.counter`  
@@ -288,10 +298,12 @@ _use this state in any component_
 _update the vuex store data_  
 
 #### mutations should be occured in actions  
-`state() { ... }`  
-__`mutations: {`__  
-  __`addOne(state) { state.counter++ }`__  
-__`}`__  
+```
+state() { ... }  
+mutations: {  
+  addOne(state) { state.counter++ }  
+}
+```
   
 `this.$store.commit('addOne')`  
 
@@ -305,11 +317,13 @@ they are used in components to commit mutations
 #### they commit mutations and can be unsynchronous  
 _you can use the same name as with the mutation_  
 
-`state() { ... }`   
-`mutations: { ... }`  
-__`actions: {`__  
-  __`increment(context) { context.commit('increment', { value: 10 } ) }`__  
-__`}`__  
+```
+state() { ... }   
+mutations: { ... }  
+actions: {  
+  increment(context) { context.commit('increment', { value: 10 } ) }  
+}
+```
 
 _use_ in the component
 `this.$store.dispatch( { 'increment', { value: 10 } } )`  
@@ -317,12 +331,14 @@ _use_ in the component
 ### Getters  
 get values from the vuex store data  
 
-`state() { ... }`   
-`mutations: { ... }`  
-`actions: { ... }`  
-__`getters: {`__  
-  __`finalCounter(state) { return state.counter *2 }`__  
-__`}`__  
+```
+state() { ... }   
+mutations: { ... }  
+actions: { ... }  
+getters: {  
+  finalCounter(state) { return state.counter *2 }  
+}
+```
 
 use getters  
 `this.$store.getters.finalCounter`  
