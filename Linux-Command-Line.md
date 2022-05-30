@@ -110,7 +110,9 @@ __Copy__
 ## Redirects
 
 ### Redirect Standard Output
+_Standard Output:_ Will output the result of a command in the console  
 __WARNING:__ Using redirect will overwrite the destination filename  
+
 `command > filename` _Will output the result of the "command" into the "filename"_  
 `ls -l /usr/bin > list.txt` _Example_  
 
