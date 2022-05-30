@@ -111,13 +111,14 @@ __Copy__
 
 ### Redirect Standard Output
 _Standard Output:_ Will output the result of a command in the console  
-__WARNING:__ Using redirect will overwrite the destination filename  
+__WARNING:__ Using basic (>) redirect will overwrite the destination filename  
+`command > filename` _Output the result of the "command" into the "filename"_  
 
-`command > filename` _Will output the result of the "command" into the "filename"_  
-`ls -l /usr/bin > list.txt` _Example_  
+`ls -l /usr/bin > list.txt` _Output the list of the /usr/bin into the list.txt_  
+`date > today.txt` _Output the command date into the file today.txt_  
 
 ### Appending Standard Output
-`date >> log.txt` _Will append the result of the date command into the log.txt (add it into the end of the file)_  
+`date >> log.txt` _Will append the result of the date command into the log.txt (push it into the end of the file)_  
 
 ## Hostinger SSH
 `rm -rf /.cagefs/tmp/*` _clean temp, reduce "Order Inodes"_  
