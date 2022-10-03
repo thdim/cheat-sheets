@@ -120,6 +120,13 @@ __WARNING:__ Using basic (>) redirect will overwrite the destination filename
 ### Appending Standard Output
 `date >> log.txt` _Will append the result of the date command into the log.txt (push it into the end of the file)_  
 
+## Piping (|)
+
+_Take the output of one command and redirect it to the input of another._  
+
+`date | rev` (send the output of date in rev - reverse order of letters)  
+`ls -l /usr/bin | less` (a more usuful example, send the result of ls -l in less)  
+
 ## Hostinger SSH
 `rm -rf /.cagefs/tmp/*` _clean temp, reduce "Order Inodes"_  
 `find domains/ -type f | wc -l` _count all files in the domains/_  
