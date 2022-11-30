@@ -16,7 +16,7 @@ __/vendor__ _3rd party software, including Laravel_
 
 ### routes
 
-Point to a static blade template (no params)  
+Route in a static blade template (no params)  
 `Route::view('/', 'index');`  
 
 Set named route  
@@ -42,8 +42,19 @@ Route::get('/recent-posts/{days_ago?}', function($daysAgo = 20) {
 
 ### Blade
 
-asset() helper function  
+#### Helper functions and commands
+
+asset()  
 `{{ asset('css/styles.css') }}`  
+
+yield()  
+`@yield('content')`  
+```
+@section('content')
+...
+@endsection
+```
+
 
 
 
