@@ -14,26 +14,37 @@ __/routes__ _configure routes_
 __/tests__  
 __/vendor__ _3rd party software, including Laravel_  
 
-## Routes
+### routes
 
-__Set named route__  
+Point to a static blade template (no params)  
+`Route::view('/', 'index');`  
+
+Set named route  
 ```
 Route::get('/contact', function () {    
   return view('contact');    
 })->name('home.contact');
-```
+```  
 
-__Set route with parameters__  
+Set route with parameters  
 ```
 Route::get('/posts/{id}', function($id) {  
   return 'Blog post '.$id;  
 });
-```
+```  
 
-__Set route with optional parameter__  
+Set route with optional parameter  
 ```
 Route::get('/recent-posts/{days_ago?}', function($daysAgo = 20) {  
   return 'Posts from '.$daysAgo.' days ago';  
 });
 ```  
+
+### Blade
+
+asset() helper function  
+`{{ asset('css/styles.css') }}`  
+
+
+
 
