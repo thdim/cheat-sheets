@@ -40,6 +40,18 @@ Route::get('/recent-posts/{days_ago?}', function($daysAgo = 20) {
 });
 ```  
 
+### Helpers
+
+in blade  
+```
+<a href="{{ route('page_name') }}?param_id={{ $paramId }}">link with param</a>
+```
+
+in controller use the request() helper  
+```
+$posts = Post::where('category_id', request('category_id'))->latest()->get();
+```  
+
 ### Blade
 
 #### Helper functions and commands
