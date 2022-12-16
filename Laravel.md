@@ -42,6 +42,8 @@ Route::get('/recent-posts/{days_ago?}', function($daysAgo = 20) {
 
 ### Helpers
 
+#### URL's with Params  
+
 in blade  
 ```
 <a href="{{ route('page_name') }}?param_id={{ $paramId }}">link with param</a>
@@ -51,6 +53,19 @@ in controller use the request() helper
 ```
 $posts = Post::where('category_id', request('category_id'))->latest()->get();
 ```  
+
+#### compact()  
+
+```
+return view('index', [
+  'categories' => $categories,
+  'posts' => $posts
+]);
+```  
+
+the same with compact()   
+
+`return view('index', compact('categories', 'posts'));`  
 
 ### Blade
 
