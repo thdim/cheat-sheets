@@ -38,7 +38,15 @@ Set route with optional parameter
 Route::get('/recent-posts/{days_ago?}', function($daysAgo = 20) {  
   return 'Posts from '.$daysAgo.' days ago';  
 });
-```  
+```
+
+Route middleware with group  
+```
+Route::group(['middleware' => ['auth']], function() {
+  Route::get(...);
+  Route::resource(...);
+});
+```   
 
 ### Helpers
 
